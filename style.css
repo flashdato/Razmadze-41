@@ -73,7 +73,9 @@ body{
     border-radius: 1px;
     position: relative;
     transition: all 0.4s ease;
-    
+}
+.navbar-nav > li > .contact{
+   align-items:end;
 }
 .drop-icon{
     position: absolute;
@@ -131,7 +133,7 @@ body{
     color: #000;
 }
 .sub-menu-item{
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
 }
@@ -228,7 +230,7 @@ body{
         padding: 0 5rem;
     }
     .navbar-nav > li{
-        border-bottom: 2px solid transparent;
+        border-bottom: 4px solid transparent;
         transition: border-bottom 0.4s ease;
     }
     .navbar-nav > li:hover{
