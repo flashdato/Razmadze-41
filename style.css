@@ -179,10 +179,13 @@ body{
     background: #fff;
     color: #000;
 }
-.header .buttons{
-    display:inline-block;
+@media screen and (max-width: 992px){
+    .header button{
+        margin: 0.5rem;
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
 }
-
 /* Media Queries */
 @media screen and (min-width: 992px){
     .navbar{
@@ -255,3 +258,4 @@ body{
         width: 40%;
     }
 }
+
