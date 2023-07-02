@@ -181,9 +181,8 @@ body{
 }
 @media screen and (max-width: 992px){
     .header button{
-        margin: 0.2rem;
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
+        align-items: center;
+        width: 90%;
     }
 }
 /* Media Queries */
