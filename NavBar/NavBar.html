@@ -1,40 +1,52 @@
- <!--jQuery-->
- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
- <script src="script.js"></script>
- <script type="text/javascript">
+<script>$(document).ready(function(){
+  $('.navbar-toggler').click(function(){
+      $('.navbar-collapse').slideToggle(300);
+  });
+  
+  smallScreenMenu();
+  let temp;
+  function resizeEnd(){
+      smallScreenMenu();
+  }
 
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-36251023-1']);
-_gaq.push(['_setDomainName', 'jqueryscript.net']);
-_gaq.push(['_trackPageview']);
-
-(function() {
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
- ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-</script>
-<script>
-try {
-fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
- return true;
-}).catch(function(e) {
- var carbonScript = document.createElement("script");
- carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
- carbonScript.id = "_carbonads_js";
+  $(window).resize(function(){
+      clearTimeout(temp);
+      temp = setTimeout(resizeEnd, 100);
+      resetMenu();
+  });
 });
-} catch (error) {
-console.log(error);
+
+
+const subMenus = $('.sub-menu');
+const menuLinks = $('.menu-link');
+
+function smallScreenMenu(){
+  if($(window).innerWidth() <= 992){
+      menuLinks.each(function(item){
+          $(this).click(function(){
+              $(this).next().slideToggle();
+          });
+      });
+  } else {
+      menuLinks.each(function(item){
+          $(this).off('click');
+      });
+  }
+}
+
+function resetMenu(){
+  if($(window).innerWidth() > 992){
+      subMenus.each(function(item){
+          $(this).css('display', 'none');
+      });
+  }
 }
 </script>
-
 <body>
-
     <div class = "main-wrapper">
       <nav class = "navbar">
         <div class = "brand-and-icon">
-          <a href = "index.html" class = "navbar-brand"><img src="/images/logo2.png"></a>
+          <a href = "index.html" class = "navbar-brand" style="font-size: 50px;"> RAZMADZE </a>
           <button type = "button" class = "navbar-toggler">
             <i class = "fas fa-bars"></i>
           </button>
@@ -292,16 +304,16 @@ body{
     list-style-type: none;
 }
 .navbar{
-    background: rgb(223, 241, 255);
-    padding: 0 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
+  background: rgb(223, 241, 255);
+  padding: 0 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  position: fixed;
 }
 .brand-and-icon{
     display: flex;
@@ -425,7 +437,6 @@ body{
         align-items: center;
         border-bottom: 1px solid #ddd;
         padding: 0 5rem;
-        position: relative;
     }
     .navbar-toggler{
         display: none;
@@ -467,7 +478,7 @@ body{
         transition: border-bottom 0.4s ease;
     }
     .navbar-nav > li:hover{
-        background-color: #3fee35;
+        background-color: #3560ee;
         border-radius: 10px;
         border-bottom-color: #000;
     }
@@ -479,7 +490,5 @@ body{
         padding-right: 2rem;
     }
 }
-
-
 
 </style>
