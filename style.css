@@ -73,6 +73,8 @@ body {
     .button_main {
         margin-top: 40px !important;
         height: 100px !important; 
+        width: 90% !important;
+        font-size: 25px !important;
     }
     .news-box {
         flex-direction: column !important;
@@ -290,3 +292,30 @@ body {
   .show-more:hover {
     color: purple;
   }
+
+ /* Base styles for the button */
+.PDF_Button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db; /* Change the background color */
+    color: #ffffff; /* Change the text color */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* On hover, change the background color slightly */
+  .PDF_Button:hover {
+    background-color: #2980b9; /* Change the hover background color */
+  }
+  
+  /* On click, give a subtle click effect */
+  .PDF_Button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  
