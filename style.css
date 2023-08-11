@@ -70,24 +70,37 @@ body {
         flex-direction: column;
         margin-bottom: 50px;
     }
+
     .button_main {
         margin-top: 40px !important;
-        height: 100px !important; 
+        height: 100px !important;
         width: 90% !important;
         font-size: 25px !important;
     }
+
     .news-box {
         flex-direction: column !important;
-      }
-    
-      .news-image {
+    }
+
+    .news-image {
         width: 220px !important;
         height: auto;
         margin-right: 20px;
-      }
-      .box {
+    }
+
+    .box {
         margin-left: 5% !important;
         margin-right: 5% !important;
+    }
+    .about .infotext {
+        margin-top: 7% !important;
+        font-size: 16px !important;
+    }
+    .about ul.dotted-list {
+        font-size: 17px !important;
+        margin-top: 10% !important;
+        letter-spacing: 1px !important;
+        line-height: 25px !important;
     }
 }
 
@@ -189,19 +202,44 @@ body {
 .about .title {
     font-size: 40px;
     font-weight: 300;
+    font-weight: bold;
 }
 
-.content1 li {
-    display: inline-block;
-    margin: 6px;
-    list-style: none;
+.about .infotext {
+    font-size: 18px;
+    margin-top: 5%;
+    letter-spacing: 1px;
+    line-height: 25px;
 }
 
-.content1 li a {
-    color: black;
-    text-decoration: none;
-    font-size: 60px;
-    transition: all ease-in-out 250ms;
+.about ul.dotted-list {
+    margin-top: 3%;
+    margin-left: 3%;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about ul.dotted-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.about ul.dotted-list li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    /* Adjust bullet size */
+}
+.about .show-logo{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button-container {
@@ -225,7 +263,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    background-image: linear-gradient(to right, #5897be 0%, #26a0da  51%, #3574d1  100%);
+    background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
     color: #ffffff;
     border-radius: 10px;
     margin: 0 10px;
@@ -242,9 +280,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .news-box {
+}
+
+.news-box {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -252,34 +290,35 @@ body {
     padding: 20px;
     background-color: #f5f5f5;
     flex-direction: row;
-  }
-  
-  .news-image {
+}
+
+.news-image {
     width: 380px;
     height: auto;
-  }
-  
-  .news-content {
+}
+
+.news-content {
     flex: 1;
-  }
-  
-  .news-header {
+}
+
+.news-header {
     font-size: 18px;
     margin-top: 0;
-  }
-  
-  .news-date {
+}
+
+.news-date {
     font-size: 14px;
     color: #777;
     margin-top: 5px;
-  }
-  
-  .news-description {
+}
+
+.news-description {
     margin-top: 10px;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
     line-height: 1.5;
-  }
-  .show-more {
+}
+
+.show-more {
     margin-top: 50px;
     display: block;
     text-align: left;
@@ -287,18 +326,21 @@ body {
     color: blue;
     margin-top: 20px;
     font-weight: bold;
-  }
-  
-  .show-more:hover {
-    color: purple;
-  }
+}
 
- /* Base styles for the button */
+.show-more:hover {
+    color: purple;
+}
+
+/* Base styles for the button */
 .PDF_Button {
+    margin-top: 10%;
     display: inline-block;
     padding: 12px 24px;
-    background-color: #3498db; /* Change the background color */
-    color: #ffffff; /* Change the text color */
+    background-color: #3498db;
+    /* Change the background color */
+    color: #ffffff;
+    /* Change the text color */
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -306,16 +348,16 @@ body {
     text-align: center;
     transition: background-color 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* On hover, change the background color slightly */
-  .PDF_Button:hover {
-    background-color: #2980b9; /* Change the hover background color */
-  }
-  
-  /* On click, give a subtle click effect */
-  .PDF_Button:active {
+}
+
+/* On hover, change the background color slightly */
+.PDF_Button:hover {
+    background-color: #2980b9;
+    /* Change the hover background color */
+}
+
+/* On click, give a subtle click effect */
+.PDF_Button:active {
     transform: translateY(1px);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  }
-  
+}
