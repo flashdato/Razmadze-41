@@ -92,15 +92,25 @@ body {
         margin-left: 5% !important;
         margin-right: 5% !important;
     }
+
     .about .infotext {
         margin-top: 7% !important;
         font-size: 16px !important;
     }
+
     .about ul.dotted-list {
         font-size: 17px !important;
         margin-top: 10% !important;
         letter-spacing: 1px !important;
         line-height: 25px !important;
+    }
+
+    .about .show-logo {
+        width: 256px !important;
+        height: 256px !important;
+    }
+    .about .title {
+        font-size: 30px !important;
     }
 }
 
@@ -203,6 +213,8 @@ body {
     font-size: 40px;
     font-weight: 300;
     font-weight: bold;
+    margin-top: -5%;
+    line-height: 110%;
 }
 
 .about .infotext {
@@ -210,6 +222,10 @@ body {
     margin-top: 5%;
     letter-spacing: 1px;
     line-height: 25px;
+}
+
+.about .orderedlist {
+    list-style-type: decimal !important;
 }
 
 .about ul.dotted-list {
@@ -234,7 +250,8 @@ body {
     font-size: 1.2em;
     /* Adjust bullet size */
 }
-.about .show-logo{
+
+.about .show-logo {
     width: 500px;
     height: 500px;
     display: block;
