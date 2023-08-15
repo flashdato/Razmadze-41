@@ -229,6 +229,7 @@ body {
 }
 .orderedlist {
     list-style-type: none;
+}
 
 .about ul.dotted-list {
     margin-top: 3%;
