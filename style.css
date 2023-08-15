@@ -227,6 +227,8 @@ body {
 .about .orderedlist {
     list-style-type: decimal !important;
 }
+.orderedlist {
+    list-style-type: none;
 
 .about ul.dotted-list {
     margin-top: 3%;
