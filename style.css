@@ -89,11 +89,17 @@ body {
     }
 
     .box {
-        margin-left: 5% !important;
-        margin-right: 5% !important;
+        margin-left: 2% !important;
+        margin-right: 2% !important;
+        padding: 2% !important;
     }
 
     .about .infotext {
+        margin-top: 7% !important;
+        font-size: 16px !important;
+    }
+
+    .italic_infotext {
         margin-top: 7% !important;
         font-size: 16px !important;
     }
@@ -112,6 +118,20 @@ body {
     .about .title {
         font-size: 30px !important;
     }
+    .stuff-box {
+        flex-direction: column; /* Stack elements vertically */
+      }
+    
+      .stuff-image {
+        margin-right: 0; /* Remove space between image and details */
+        margin-bottom: 10px; /* Add space between image and details */
+        text-align: center; /* Center image */
+      }
+    
+      .stuff-details {
+        line-height: 20px !important;
+        font-size: 10px !important; 
+      }
 }
 
 /* Media Queries */
@@ -206,7 +226,7 @@ body {
 }
 
 .about {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .about .title {
@@ -223,6 +243,22 @@ body {
     letter-spacing: 1px;
     line-height: 25px;
 }
+
+.italic_infotext {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 5%;
+    letter-spacing: 1px;
+    line-height: 25px;
+    background-color: #e7e7e7;
+}
+
+.picture-description {
+    margin-top: 8px; 
+    font-size: 14px; 
+    color: #888; 
+    margin-left: 10%;
+  }
 
 .about .orderedlist {
     list-style-type: decimal !important;
@@ -260,6 +296,14 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.about .news_picture{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+    margin-top: 30px;   
+    width: 90%;
 }
 
 .about .structure {
@@ -311,6 +355,7 @@ body {
 }
 
 .news-box {
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -318,6 +363,7 @@ body {
     padding: 20px;
     background-color: #f5f5f5;
     flex-direction: row;
+    color: #000;
 }
 
 .news-image {
@@ -389,3 +435,43 @@ body {
     transform: translateY(1px);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
+
+.stuff-box {
+    display: flex; /* Display the image and details side by side */
+    align-items: center; /* Center vertically within the box */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 8px; /* Add rounded corners to the box */
+    padding: 15px; /* Add space inside the box */
+    margin-bottom: 20px; /* Add space between stuff boxes */
+  }
+  
+  /* CSS for the stuff image */
+  .stuff-image {
+    flex: 0 0 auto; /* Do not allow the image to grow or shrink */
+    margin-right: 15px; /* Add space between image and details */
+  }
+  
+  .stuff-image img {
+    width: 170px; /* Set the image width */
+    height: 150px; /* Set the image height */
+    border-radius: 10px; /* Add small rounded corners to the image */
+  }
+  
+  /* CSS for the stuff details */
+  .stuff-details {
+    flex: 1; /* Allow the details to grow and take available space */
+  }
+  
+  .stuff-name {
+    margin: 0; /* Remove margin for the name */
+    font-size: 18px; /* Adjust font size for the name */
+    margin-left: 5%;
+  }
+  
+  .stuff-role {
+    margin: 5px 0; /* Add space above and below the role */
+    font-size: 14px; /* Adjust font size for the role */
+    color: #888; /* Grey text color */
+    margin-left: 5%;
+  }
+  
