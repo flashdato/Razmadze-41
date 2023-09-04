@@ -84,7 +84,7 @@ body {
 
     .news-image {
         width: 220px !important;
-        height: auto;
+        height: 140px !important;
         margin-right: 20px;
     }
 
@@ -368,7 +368,7 @@ body {
 
 .news-image {
     width: 380px;
-    height: auto;
+    height: 240px;
 }
 
 .news-content {
