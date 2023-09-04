@@ -475,8 +475,7 @@ body {
     margin-left: 5%;
   }
 
-
 .inprogress {
-    
+    pointer-events: none;
 }
   
