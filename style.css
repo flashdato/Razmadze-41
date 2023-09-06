@@ -115,23 +115,32 @@ body {
         width: 256px !important;
         height: 256px !important;
     }
+
     .about .title {
         font-size: 30px !important;
     }
+
     .stuff-box {
-        flex-direction: column; /* Stack elements vertically */
-      }
-    
-      .stuff-image {
-        margin-right: 0; /* Remove space between image and details */
-        margin-bottom: 10px; /* Add space between image and details */
-        text-align: center; /* Center image */
-      }
-    
-      .stuff-details {
+        flex-direction: column;
+        /* Stack elements vertically */
+    }
+
+    .stuff-image {
+        margin-right: 0;
+        /* Remove space between image and details */
+        margin-bottom: 10px;
+        /* Add space between image and details */
+        text-align: center;
+        /* Center image */
+    }
+
+    .stuff-details {
         line-height: 20px !important;
-        font-size: 10px !important; 
-      }
+        font-size: 10px !important;
+    }
+    .timetable {
+        font-size: 11px;
+    }
 }
 
 /* Media Queries */
@@ -244,6 +253,23 @@ body {
     line-height: 25px;
 }
 
+.timetable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timetable th,
+.timetable td {
+    border: none;
+    text-align: left;
+    padding: 15px;
+}
+
+.timetable {
+    margin-right: 100px; /* Adjust the value as needed */
+  }
+
 .italic_infotext {
     font-style: italic;
     font-size: 18px;
@@ -254,15 +280,16 @@ body {
 }
 
 .picture-description {
-    margin-top: 8px; 
-    font-size: 14px; 
-    color: #888; 
+    margin-top: 8px;
+    font-size: 14px;
+    color: #888;
     margin-left: 10%;
-  }
+}
 
 .about .orderedlist {
     list-style-type: decimal !important;
 }
+
 .orderedlist {
     list-style-type: none;
 }
@@ -298,11 +325,11 @@ body {
     margin-right: auto;
 }
 
-.about .news_picture{
+.about .news_picture {
     display: block;
     margin-left: auto;
-    margin-right: auto;   
-    margin-top: 30px;   
+    margin-right: auto;
+    margin-top: 30px;
     width: 90%;
 }
 
@@ -437,45 +464,61 @@ body {
 }
 
 .stuff-box {
-    display: flex; /* Display the image and details side by side */
-    align-items: center; /* Center vertically within the box */
-    border: 1px solid #ccc; /* Add a border for visual separation */
-    border-radius: 8px; /* Add rounded corners to the box */
-    padding: 15px; /* Add space inside the box */
-    margin-bottom: 20px; /* Add space between stuff boxes */
-  }
-  
-  /* CSS for the stuff image */
-  .stuff-image {
-    flex: 0 0 auto; /* Do not allow the image to grow or shrink */
-    margin-right: 15px; /* Add space between image and details */
-  }
-  
-  .stuff-image img {
-    width: 170px; /* Set the image width */
-    height: 150px; /* Set the image height */
-    border-radius: 10px; /* Add small rounded corners to the image */
-  }
-  
-  /* CSS for the stuff details */
-  .stuff-details {
-    flex: 1; /* Allow the details to grow and take available space */
-  }
-  
-  .stuff-name {
-    margin: 0; /* Remove margin for the name */
-    font-size: 18px; /* Adjust font size for the name */
+    display: flex;
+    /* Display the image and details side by side */
+    align-items: center;
+    /* Center vertically within the box */
+    border: 1px solid #ccc;
+    /* Add a border for visual separation */
+    border-radius: 8px;
+    /* Add rounded corners to the box */
+    padding: 15px;
+    /* Add space inside the box */
+    margin-bottom: 20px;
+    /* Add space between stuff boxes */
+}
+
+/* CSS for the stuff image */
+.stuff-image {
+    flex: 0 0 auto;
+    /* Do not allow the image to grow or shrink */
+    margin-right: 15px;
+    /* Add space between image and details */
+}
+
+.stuff-image img {
+    width: 170px;
+    /* Set the image width */
+    height: 150px;
+    /* Set the image height */
+    border-radius: 10px;
+    /* Add small rounded corners to the image */
+}
+
+/* CSS for the stuff details */
+.stuff-details {
+    flex: 1;
+    /* Allow the details to grow and take available space */
+}
+
+.stuff-name {
+    margin: 0;
+    /* Remove margin for the name */
+    font-size: 18px;
+    /* Adjust font size for the name */
     margin-left: 5%;
-  }
-  
-  .stuff-role {
-    margin: 5px 0; /* Add space above and below the role */
-    font-size: 14px; /* Adjust font size for the role */
-    color: #888; /* Grey text color */
+}
+
+.stuff-role {
+    margin: 5px 0;
+    /* Add space above and below the role */
+    font-size: 14px;
+    /* Adjust font size for the role */
+    color: #888;
+    /* Grey text color */
     margin-left: 5%;
-  }
+}
 
 .inprogress {
     pointer-events: none;
 }
-  
