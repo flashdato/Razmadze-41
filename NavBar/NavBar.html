@@ -21,7 +21,7 @@
   const menuLinks = $('.menu-link');
 
   function smallScreenMenu() {
-    if ($(window).innerWidth() <= 1000) {
+    if ($(window).innerWidth() <= 1200) {
       menuLinks.each(function (item) {
         $(this).click(function () {
           $(this).next().slideToggle();
@@ -35,7 +35,7 @@
   }
 
   function resetMenu() {
-    if ($(window).innerWidth() > 1000) {
+    if ($(window).innerWidth() > 1200) {
       subMenus.each(function (item) {
         $(this).css('display', 'none');
       });
@@ -60,7 +60,7 @@
           </li>
 
           <li>
-            <a class="inprogress" href="#" class="menu-link">
+            <a class="menu-link">
               პროექტები და მემორანდუმები
               <span class="drop-icon">
                 <i class="fas fa-chevron-down"></i>
@@ -101,7 +101,7 @@
                 <ul>
                   <li><a class="inprogress" href="#">ნორჩ ნატურალისტთა ოლიმპიადა</a></li>
                   <li><a class="inprogress" href="#">ჟაუტიკოვის ოლიმპიადის შესარჩევი</a></li>
-                  <li><a class="inprogress" href="#">ფიზიკის ევროპის ოლიმპიადა</a></li>
+                  <li><a class="inprogress" href="#">ფიზიკის ე    background: rgb(126, 199, 255);ვროპის ოლიმპიადა</a></li>
                   <li><a class="inprogress" href="#">გოგონათა ევროპის ოლიმპიადა</a></li>
                   <li><a class="inprogress" href="#">"საერთაშორისო ოლიმპიადები"</a></li>
                   <li><a class="inprogress" href="#">"რობოტიკის ოლიმპიადა"</a></li>
@@ -113,7 +113,7 @@
           </li>
 
           <li>
-            <a class="inprogress" href="#" class="menu-link">
+            <a class="menu-link">
               სასკოლო წერები
               <span class="drop-icon">
                 <i class="fas fa-chevron-down"></i>
@@ -160,7 +160,7 @@
           </li>
 
           <li>
-            <a class="inprogress" href="#" class="menu-link">
+            <a class="menu-link">
               წრეები და კლუბები
               <span class="drop-icon">
                 <i class="fas fa-chevron-down"></i>
@@ -183,7 +183,7 @@
               <div class="sub-menu-item">
                 <h4>STEM წრეები</h4>
                 <ul>
-                  <li><a class="inprogress" href="#">STEM ლაბოლატორია</a></li>
+                  <li><a class="inprogress" href="#">STEM ლაბო    background: rgb(126, 199, 255);ლატორია</a></li>
                   <li><a class="inprogress" href="#">რობოტიკის წრე</a></li>
                   <li><a class="inprogress" href="#">ქიმიის წრე</a></li>
                   <li><a class="inprogress" href="#">ბიოლოგიის წრე</a></li>
@@ -198,7 +198,9 @@
                   <li><a class="inprogress" href="#">მკითხველთა კლუბი</a></li>
                   <li><a class="inprogress" href="#">STEM კლუბი</a></li>
                   <li><a class="inprogress" href="#">დებატების კლუბი</a></li>
-                  <li><a href="/Clubs and Curses/clubs/wignebis_taro.html">რა? სად? როდის? და წიგნების თარო</a></li>
+                  <li><a href="/Clubs and Curses/clubs/wignebis_taro.html">წიგნების თარო</a></li>
+                  <li><a class="inprogress" href="#">რა? სად? როდის?</a></li>
+                  <li><a href="/Clubs and Curses/clubs/eco_club.html">ეკო კლუბი</a></li>
                   <li><a class="inprogress" href="#">ჭადრაკის კლუბი</a></li>
                 </ul>
               </div>
@@ -207,7 +209,7 @@
           </li>
 
           <li>
-            <a class="inprogress" href="#" class="menu-link">
+            <a class="menu-link">
               ჩვენ შესახებ
               <span class="drop-icon">
                 <i class="fas fa-chevron-down"></i>
@@ -271,10 +273,7 @@
             </div>
           </li>
           <li>
-            <a class="inprogress" href="#">გალერია</a>
-          </li>
-          <li>
-            <a class="contact" href="#">დაგვიკავშირდით</a>
+            <a class="inprogress" href="#">გალერეა</a>
           </li>
         </ul>
       </div>
@@ -378,7 +377,7 @@
   }
 
   .navbar {
-    background: rgb(223, 241, 255);
+    background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #35bad1 100%);
     padding: 0 1rem;
     top: 0;
     left: 0;
@@ -402,6 +401,7 @@
     letter-spacing: 3px;
     font-weight: 700;
     width: min-content;
+    color: white !important;
   }
 
   .navbar-toggler {
@@ -427,7 +427,7 @@
 
   .navbar-nav>li>a {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     display: block;
     padding: 0.6rem 0;
@@ -436,6 +436,7 @@
     border-radius: 1px;
     position: relative;
     transition: all 0.4s ease;
+    color: white;
   }
 
   .navbar-nav>li>.contact {
@@ -558,12 +559,11 @@
   }
 
   /* Media Queries */
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     .navbar {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
-      border-bottom: 1px solid #ddd;
       padding: 0 5rem;
     }
 
