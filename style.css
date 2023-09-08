@@ -478,9 +478,9 @@ body {
 #next-page:hover, #prev-page:hover {
     background-color: #4b83c2; /* Darker blue on hover */
 }
-#next-page {
+/* #next-page {
    /* MOVE IT TO RIGHT */
-}
+} */
 
 .stuff-box {
     display: flex;
