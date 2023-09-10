@@ -141,6 +141,10 @@ body {
     .timetable {
         font-size: 11px;
     }
+
+    .registration-button {
+       display: none !important;
+    }
 }
 
 /* Media Queries */
@@ -375,6 +379,50 @@ body {
     background-color: #ffac33;
 }
 
+/* Button Style */
+.registration-button {
+    position: fixed;
+    top: 450px; /* Adjust the distance from the top */
+    left: 20px; /* Adjust the distance from the left */
+    background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
+    border: 2px solid #173518;
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.829);
+    z-index: 1000;
+    cursor: pointer;
+    display: flex; /* Make the content of the button flex */
+    align-items: center; /* Vertically align content */
+    width: 265px;
+}
+
+/* Icon Style */
+.registration-icon {
+    width: 180px; /* Adjust the width of the icon */
+    height: 180px; /* Adjust the height of the icon */
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center; 
+}
+
+/* Text Style */
+.button-text {
+    line-height: 25px;
+    text-align: center;
+    font-size: 25px; /* Adjust the font size */
+    font-weight: 800;
+}
+
+/* Hover effect (optional) */
+.registration-button:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+
+
+
 .news-container {
     display: flex;
     flex-direction: column;
@@ -536,8 +584,4 @@ body {
     color: #888;
     /* Grey text color */
     margin-left: 5%;
-}
-
-.inprogress {
-    pointer-events: none;
 }
