@@ -31,19 +31,22 @@
     <a href="https://forms.gle/vXsm2PaauNbzh4Pc9" class="registration-button">
       <div class="button-content">
         <div class="button-text">საკვირაო სკოლა</div>
-          <img src="/images/registration_form.png" alt="Registration" class="registration-icon">
+        <img src="/images/registration_form.png" alt="Registration" class="registration-icon">
       </div>
-  </a>
+    </a>
 
-  <a href="https://forms.gle/vXsm2PaauNbzh4Pc9" class="registration-button" style="width: 265px; top: 700px;">
-    <div class="button-content" style="margin-left: 20px;">
+    <a href="https://forms.gle/vXsm2PaauNbzh4Pc9" class="registration-button" style="width: 265px; top: 200px;">
+      <div class="button-content" style="margin-left: 20px;">
         <div class="button-text">რეგისტრაცია</div>
+      </div>
+    </a>
+    <div id="datetime-container">
+      <div id="datetime"></div>
+      <div id="date"></div>
     </div>
-</a>
-  
-  
-  
-  
+
+
+
     <a href="/Projects_and_memoranda/sakvirao_skola.html" class="button_main">საკვირაო სკოლა</a>
     <a href="/Projects_and_memoranda/sagamos_skola.html" class="button_main">საღამოს სკოლა</a>
     <a href="#" class="button_main">აბიტურიენტების სკოლა</a>
@@ -88,6 +91,10 @@
   <div id="Footer"></div>
   <script src="./newsData.js"></script>
   <script>
+    const datetimeContainer = document.getElementById('datetime-container');
+    const containerTop = 300; // The minimum top position where it should disappear
+
+
     document.addEventListener('DOMContentLoaded', function () {
       const newsBoxes = document.querySelectorAll('.news-box');
       const prevPageButton = document.getElementById('prev-page');
@@ -144,6 +151,35 @@
           fillNewsItems();
         }
       });
+    });
+    function updateDateTime() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0'); // Format hours with leading zero
+      const minutes = now.getMinutes().toString().padStart(2, '0'); // Format minutes with leading zero
+      const day = now.getDate();
+      const month = now.toLocaleDateString('ka-GE', { month: 'long' }); // Convert month to Georgian language
+
+      const datetimeElement = document.getElementById('datetime');
+      const dateElement = document.getElementById('date');
+
+      datetimeElement.textContent = `${hours}:${minutes}`;
+      dateElement.textContent = `${day} ${month}`;
+    }
+
+    // Initial call to set the date and time
+    updateDateTime();
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+
+      // Check if the container should be visible or hidden
+      if (scrollY >= containerTop) {
+        datetimeContainer.style.opacity = '1'; // Make it visible
+      } else {
+        datetimeContainer.style.opacity = '0'; // Make it invisible
+      }
     });
   </script>
 </body>

@@ -138,12 +138,17 @@ body {
         line-height: 20px !important;
         font-size: 10px !important;
     }
+
     .timetable {
         font-size: 11px;
     }
 
     .registration-button {
-       display: none !important;
+        display: none !important;
+    }
+
+    #datetime-container {
+        display: none !important;
     }
 }
 
@@ -271,8 +276,9 @@ body {
 }
 
 .timetable {
-    margin-right: 100px; /* Adjust the value as needed */
-  }
+    margin-right: 100px;
+    /* Adjust the value as needed */
+}
 
 .italic_infotext {
     font-style: italic;
@@ -381,44 +387,51 @@ body {
 
 /* Button Style */
 .registration-button {
-    position: fixed;
-    top: 450px; /* Adjust the distance from the top */
-    left: 20px; /* Adjust the distance from the left */
+    position: absolute;
+    left: 20px;
+    /* Adjust the distance from the left */
     background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
     border: 2px solid #173518;
-    color: #fff; /* Button text color */
+    color: #fff;
+    /* Button text color */
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.829);
     z-index: 1000;
     cursor: pointer;
-    display: flex; /* Make the content of the button flex */
-    align-items: center; /* Vertically align content */
+    display: flex;
+    /* Make the content of the button flex */
+    align-items: center;
+    /* Vertically align content */
     width: 265px;
 }
 
 /* Icon Style */
 .registration-icon {
-    width: 180px; /* Adjust the width of the icon */
-    height: 180px; /* Adjust the height of the icon */
+    width: 180px;
+    /* Adjust the width of the icon */
+    height: 180px;
+    /* Adjust the height of the icon */
     margin-right: auto;
     margin-left: auto;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 /* Text Style */
 .button-text {
     line-height: 25px;
     text-align: center;
-    font-size: 25px; /* Adjust the font size */
+    font-size: 25px;
+    /* Adjust the font size */
     font-weight: 800;
 }
 
 /* Hover effect (optional) */
 .registration-button:hover {
-    background-color: #0056b3; /* Change the background color on hover */
+    background-color: #0056b3;
+    /* Change the background color on hover */
 }
 
 
@@ -512,20 +525,32 @@ body {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-#next-page, #prev-page {
-    background-color: #6fa4e1; /* Light blue background color */
-    color: white; /* White text color */
-    padding: 10px 20px; /* Padding for the buttons */
-    border: none; /* Remove border */
-    cursor: pointer; /* Add pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    margin-top: 10px; /* Add top margin */
-    margin-left: 10px; /* Add left margin for the Next Page button */
+#next-page,
+#prev-page {
+    background-color: #6fa4e1;
+    /* Light blue background color */
+    color: white;
+    /* White text color */
+    padding: 10px 20px;
+    /* Padding for the buttons */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Add pointer cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-top: 10px;
+    /* Add top margin */
+    margin-left: 10px;
+    /* Add left margin for the Next Page button */
 }
 
-#next-page:hover, #prev-page:hover {
-    background-color: #4b83c2; /* Darker blue on hover */
+#next-page:hover,
+#prev-page:hover {
+    background-color: #4b83c2;
+    /* Darker blue on hover */
 }
+
 /* #next-page {
    /* MOVE IT TO RIGHT 
 } */
@@ -584,4 +609,40 @@ body {
     color: #888;
     /* Grey text color */
     margin-left: 5%;
+}
+
+#datetime-container {
+    background-image: linear-gradient(to right, #5897be 10%, #26a0da 41%, #3574d1 100%);
+    border: 2px solid #173518;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px; /* Add some padding inside the container */
+    text-align: center; /* Center-align the text */
+    position: fixed;
+    left: 20px;
+    width: 265px;
+    margin-top: 5px; /* Adjust the distance from the icon */
+    transition: top 0.3s ease; /* Add a smooth transition for the 'top' property */
+    opacity: 0; /* Initially set to be invisible */
+}
+
+#datetime {
+    font-size: 74px;
+    /* Adjust the font size for hours and minutes */
+    color: #fff;
+    /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Text shadow for better visibility */
+    margin-top: 5px;
+    /* Adjust the distance from the icon */
+    display: block;
+    /* Ensure the text wraps to the next line */
+}
+
+#date {
+    font-size: 24px;
+    /* Adjust the font size for day and month */
+    color: #fff;
+    /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Text shadow for better visibility */
 }
