@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_8/news8.jpg',
+        title: 'ეროვნული სასწავლო გეგმა 2023-2024',
+        date: '15 სექტემბერი, 2023',
+        description: 'სსიპ ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის სასკოლო სასწავლო გეგმა',
+        link: '/News_Feed/news_8.html',
+    },
+    {
+        imageSrc: '/images/news/news_7/news7.jpg',
+        title: 'შინაგანა წესი 2023-2024',
+        date: '15 სექტემბერი, 2023',
+        description: 'სსიპ ანდრია რაზმაძის სახელობის ქ.ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის შინაგანაწესი',
+        link: '/News_Feed/news_7.html',
+    },
+    {
         imageSrc: '/images/news/news_6/news6.jpg',
         title: 'პროექტი „წითელი ნაკვალევი“',
         date: '9 სექტემბერი, 2023',

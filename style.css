@@ -304,6 +304,10 @@ body {
     list-style-type: none;
 }
 
+.unorderedlist {
+    list-style-type: disc !important; 
+}
+
 .about ul.dotted-list {
     margin-top: 3%;
     margin-left: 3%;
@@ -479,6 +483,17 @@ body {
     margin-top: 10px;
     letter-spacing: 1px;
     line-height: 1.5;
+}
+.newstable, .newstable th {
+    border-collapse: collapse;
+}
+.newstable th {
+    padding: 13px;
+}
+.newstable, .newstable td {
+    text-align: center;
+    border: rgb(168, 166, 166) solid 1px;
+    font-size: 14px;
 }
 
 .show-more {
