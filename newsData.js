@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_9/news9.jpg',
+        title: '  "ნიჭიერთა საღამო სკოლის" წრე ფიზიკასა და მათემატიკაში',
+        date: '18 სექტემბერი, 2023',
+        description: '"ნიჭიერთა სკოლა" (იგივე "საღამოს სკოლა") აცხადებს მოსწავლეთა მიღებას 2023-2024 სასწავლო წლისათვის',
+        link: '/News_Feed/news_9.html',
+    },
+    {
         imageSrc: '/images/news/news_8/news8.jpg',
         title: 'ეროვნული სასწავლო გეგმა 2023-2024',
         date: '15 სექტემბერი, 2023',

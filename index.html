@@ -35,12 +35,14 @@
       </div>
     </a>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5Ga5vD8uMOUnxajMzDik5R9Bvyd4YXlw6ogs_jKro7sW6xQ/viewform" class="registration-button" style="margin-top: 750px">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5Ga5vD8uMOUnxajMzDik5R9Bvyd4YXlw6ogs_jKro7sW6xQ/viewform"
+      class="registration-button" style="margin-top: 750px">
       <div class="button-content">
         <div class="button-text2">რეგისტრაცია</div>
       </div>
     </a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5Ga5vD8uMOUnxajMzDik5R9Bvyd4YXlw6ogs_jKro7sW6xQ/viewform" class="registration-button-2">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5Ga5vD8uMOUnxajMzDik5R9Bvyd4YXlw6ogs_jKro7sW6xQ/viewform"
+      class="registration-button-2">
       <div class="button-content">
         <div class="button-text1">საღამოს&nbsp;სკოლა</div>
         <img src="/images/registration_form.png" alt="Registration" class="registration-icon">
@@ -56,13 +58,13 @@
       <div id="calendar">
         <div id="calendar-title"></div>
         <div class="calendar-table" id="calendar-table"></div>
-      </div>      
+      </div>
     </div>
 
 
 
     <a href="/Projects_and_memoranda/sakvirao_skola.html" class="button_main">საკვირაო სკოლა</a>
-    <a href="/Projects_and_memoranda/sagamos_skola.html" class="button_main">საღამოს სკოლა</a>
+    <a href="/Projects_and_memoranda/sagamos_skola/sagamos_skola.html" class="button_main">საღამოს სკოლა</a>
     <a href="#" class="button_main">აბიტურიენტების სკოლა</a>
   </div>
 
@@ -96,6 +98,32 @@
             </div>
           </a>
         </div>
+        <div class="news-container">
+          <a href="#" class="news-box">
+            <img alt="News 4" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+          <a href="#" class="news-box">
+            <img alt="News 5" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+          <a href="#" class="news-box">
+            <img alt="News 6" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+        </div>
         <button id="prev-page">წინა გვერდი</button>
         <button id="next-page">შემდეგი გვერდი</button>
       </div>
@@ -109,58 +137,58 @@
     const calendarElement = document.getElementById('calendar');
 
     function updateCalendar() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth();
-  const day = now.getDate();
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const firstDayOfWeek = new Date(year, month, 1).getDay(); // 0 is Sunday, 1 is Monday, etc.
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      const day = now.getDate();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const firstDayOfWeek = new Date(year, month, 1).getDay(); // 0 is Sunday, 1 is Monday, etc.
 
-  const calendarTitle = document.getElementById('calendar-title');
-  const calendarTable = document.getElementById('calendar-table');
+      const calendarTitle = document.getElementById('calendar-title');
+      const calendarTable = document.getElementById('calendar-table');
 
-  const georgianMonths = [
-    'იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
-    'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'
-  ];
+      const georgianMonths = [
+        'იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
+        'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'
+      ];
 
-  calendarTitle.textContent = `${georgianMonths[month]}`;
+      calendarTitle.textContent = `${georgianMonths[month]}`;
 
-  calendarTable.innerHTML = '';
+      calendarTable.innerHTML = '';
 
-  let dayCount = 1;
-  for (let i = 0; i < 42; i++) {
-    const calendarCell = document.createElement('div');
-    calendarCell.classList.add('calendar-cell');
+      let dayCount = 1;
+      for (let i = 0; i < 42; i++) {
+        const calendarCell = document.createElement('div');
+        calendarCell.classList.add('calendar-cell');
 
-    if (i >= firstDayOfWeek && dayCount <= daysInMonth) {
-      calendarCell.textContent = dayCount;
+        if (i >= firstDayOfWeek && dayCount <= daysInMonth) {
+          calendarCell.textContent = dayCount;
 
-      if (year === now.getFullYear() && month === now.getMonth() && dayCount === day) {
-        calendarCell.classList.add('today');
-      }
+          if (year === now.getFullYear() && month === now.getMonth() && dayCount === day) {
+            calendarCell.classList.add('today');
+          }
 
-      dayCount++;
-    } else {
-      // Display numbers for previous and next months in grey color
-      if (i < firstDayOfWeek) {
-        calendarCell.textContent = new Date(year, month - 1, i - firstDayOfWeek + 1).getDate();
-        calendarCell.classList.add('other-month');
-      } else {
-        calendarCell.textContent = new Date(year, month + 1, i - daysInMonth - firstDayOfWeek + 1).getDate();
-        calendarCell.classList.add('other-month');
+          dayCount++;
+        } else {
+          // Display numbers for previous and next months in grey color
+          if (i < firstDayOfWeek) {
+            calendarCell.textContent = new Date(year, month - 1, i - firstDayOfWeek + 1).getDate();
+            calendarCell.classList.add('other-month');
+          } else {
+            calendarCell.textContent = new Date(year, month + 1, i - daysInMonth - firstDayOfWeek + 1).getDate();
+            calendarCell.classList.add('other-month');
+          }
+        }
+
+        calendarTable.appendChild(calendarCell);
       }
     }
 
-    calendarTable.appendChild(calendarCell);
-  }
-}
+    // Initial call to set the date and time
+    updateCalendar();
 
-// Initial call to set the date and time
-updateCalendar();
-
-// Update the calendar every second
-setInterval(updateCalendar, 10000);
+    // Update the calendar every second
+    setInterval(updateCalendar, 1000);
 
 
 
@@ -189,6 +217,12 @@ setInterval(updateCalendar, 10000);
 
       function hideNewsBox(newsBox) {
         newsBox.style.opacity = '0'; // Hide the news box by setting opacity to 0
+        const links = newsBox.querySelectorAll('a');
+        links.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default click behavior
+          });
+        });
       }
 
       function showNewsBox(newsBox, newsData) {
@@ -196,7 +230,7 @@ setInterval(updateCalendar, 10000);
       }
 
       function fillNewsItems() {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 6; i++) {
           const currentNewsData = newsData[currentPage + i];
           const newsBox = newsBoxes[i];
 
@@ -218,22 +252,22 @@ setInterval(updateCalendar, 10000);
           }
         }
 
-        nextPageButton.disabled = currentPage + 3 >= newsData.length;
+        nextPageButton.disabled = currentPage + 6 >= newsData.length;
         prevPageButton.disabled = currentPage === 0;
       }
 
       fillNewsItems();
 
       nextPageButton.addEventListener('click', function () {
-        if (currentPage + 3 < newsData.length) {
-          currentPage += 3;
+        if (currentPage + 6 < newsData.length) {
+          currentPage += 6;
           fillNewsItems();
         }
       });
 
       prevPageButton.addEventListener('click', function () {
         if (currentPage > 0) {
-          currentPage -= 3;
+          currentPage -= 6;
           fillNewsItems();
         }
       });
