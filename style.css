@@ -147,6 +147,11 @@ body {
         display: none !important;
     }
 
+
+    .registration-button-2 {
+        display: none !important;
+    }
+
     #datetime-container {
         display: none !important;
     }
@@ -394,6 +399,27 @@ body {
     position: absolute;
     margin-top: 400px;
     left: 20px;
+    /* Adjust the distance from the left */
+    background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
+    border: 2px solid #173518;
+    color: #fff;
+    /* Button text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.829);
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    /* Make the content of the button flex */
+    align-items: center;
+    /* Vertically align content */
+    width: 14%;
+}
+.registration-button-2 {
+    position: absolute;
+    margin-top: 400px;
+    left: 85%;
     /* Adjust the distance from the left */
     background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
     border: 2px solid #173518;
