@@ -8,7 +8,7 @@ const newsData = [
     },
     {
         imageSrc: '/images/news/news_7/news7.jpg',
-        title: 'შინაგანა წესი 2023-2024',
+        title: 'შინაგანაწესი 2023-2024',
         date: '15 სექტემბერი, 2023',
         description: 'სსიპ ანდრია რაზმაძის სახელობის ქ.ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის შინაგანაწესი',
         link: '/News_Feed/news_7.html',

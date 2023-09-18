@@ -30,19 +30,21 @@
   <div class="button-container">
     <a href="https://forms.gle/vXsm2PaauNbzh4Pc9" class="registration-button">
       <div class="button-content">
-        <div class="button-text">საკვირაო სკოლა</div>
+        <div class="button-text1">საკვირაო&nbsp;სკოლა</div>
         <img src="/images/registration_form.png" alt="Registration" class="registration-icon">
       </div>
     </a>
 
-    <a href="https://forms.gle/vXsm2PaauNbzh4Pc9" class="registration-button" style="width: 265px; top: 200px;">
-      <div class="button-content" style="margin-left: 20px;">
-        <div class="button-text">რეგისტრაცია</div>
+    <a href="https://forms.gle/vXsm2PaauNbzh4Pc9" class="registration-button" style="margin-top: 750px">
+      <div class="button-content">
+        <div class="button-text2">რეგისტრაცია</div>
       </div>
     </a>
     <div id="datetime-container">
-      <div id="datetime"></div>
-      <div id="date"></div>
+      <div id="calendar">
+        <div id="calendar-title"></div>
+        <div class="calendar-table" id="calendar-table"></div>
+      </div>      
     </div>
 
 
@@ -92,7 +94,86 @@
   <script src="./newsData.js"></script>
   <script>
     const datetimeContainer = document.getElementById('datetime-container');
-    const containerTop = 300; // The minimum top position where it should disappear
+    const calendarElement = document.getElementById('calendar');
+    const containerTop = 500; // The minimum top position where it should disappear
+
+    function updateCalendar() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const day = now.getDate();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDayOfWeek = new Date(year, month, 1).getDay(); // 0 is Sunday, 1 is Monday, etc.
+
+  const calendarTitle = document.getElementById('calendar-title');
+  const calendarTable = document.getElementById('calendar-table');
+
+  const georgianMonths = [
+    'იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
+    'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'
+  ];
+
+  calendarTitle.textContent = `${georgianMonths[month]}`;
+
+  calendarTable.innerHTML = '';
+
+  let dayCount = 1;
+  for (let i = 0; i < 42; i++) {
+    const calendarCell = document.createElement('div');
+    calendarCell.classList.add('calendar-cell');
+
+    if (i >= firstDayOfWeek && dayCount <= daysInMonth) {
+      calendarCell.textContent = dayCount;
+
+      if (year === now.getFullYear() && month === now.getMonth() && dayCount === day) {
+        calendarCell.classList.add('today');
+      }
+
+      dayCount++;
+    } else {
+      // Display numbers for previous and next months in grey color
+      if (i < firstDayOfWeek) {
+        calendarCell.textContent = new Date(year, month - 1, i - firstDayOfWeek + 1).getDate();
+        calendarCell.classList.add('other-month');
+      } else {
+        calendarCell.textContent = new Date(year, month + 1, i - daysInMonth - firstDayOfWeek + 1).getDate();
+        calendarCell.classList.add('other-month');
+      }
+    }
+
+    calendarTable.appendChild(calendarCell);
+  }
+}
+
+// Initial call to set the date and time
+updateCalendar();
+
+// Update the calendar every second
+setInterval(updateCalendar, 10000);
+
+
+
+
+    // Initial call to set the calendar
+    updateCalendar();
+
+    // Update the calendar when the page loads
+    window.addEventListener('load', updateCalendar);
+
+    // Update the calendar when the window is resized
+    window.addEventListener('resize', updateCalendar);
+
+    // Update the calendar when the user scrolls
+    window.addEventListener('scroll', function () {
+      const scrollY = window.scrollY;
+
+      // Check if the container should be visible or hidden
+      if (scrollY >= containerTop) {
+        datetimeContainer.style.opacity = '1'; // Make it visible
+      } else {
+        datetimeContainer.style.opacity = '0'; // Make it invisible
+      }
+    });
 
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -151,35 +232,6 @@
           fillNewsItems();
         }
       });
-    });
-    function updateDateTime() {
-      const now = new Date();
-      const hours = now.getHours().toString().padStart(2, '0'); // Format hours with leading zero
-      const minutes = now.getMinutes().toString().padStart(2, '0'); // Format minutes with leading zero
-      const day = now.getDate();
-      const month = now.toLocaleDateString('ka-GE', { month: 'long' }); // Convert month to Georgian language
-
-      const datetimeElement = document.getElementById('datetime');
-      const dateElement = document.getElementById('date');
-
-      datetimeElement.textContent = `${hours}:${minutes}`;
-      dateElement.textContent = `${day} ${month}`;
-    }
-
-    // Initial call to set the date and time
-    updateDateTime();
-
-    // Update the date and time every second
-    setInterval(updateDateTime, 1000);
-    window.addEventListener('scroll', function () {
-      const scrollY = window.scrollY;
-
-      // Check if the container should be visible or hidden
-      if (scrollY >= containerTop) {
-        datetimeContainer.style.opacity = '1'; // Make it visible
-      } else {
-        datetimeContainer.style.opacity = '0'; // Make it invisible
-      }
     });
   </script>
 </body>

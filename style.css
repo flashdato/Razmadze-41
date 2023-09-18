@@ -392,6 +392,7 @@ body {
 /* Button Style */
 .registration-button {
     position: absolute;
+    margin-top: 400px;
     left: 20px;
     /* Adjust the distance from the left */
     background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
@@ -408,28 +409,36 @@ body {
     /* Make the content of the button flex */
     align-items: center;
     /* Vertically align content */
-    width: 265px;
+    width: 14%;
 }
 
 /* Icon Style */
 .registration-icon {
-    width: 180px;
     /* Adjust the width of the icon */
     height: 180px;
     /* Adjust the height of the icon */
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 20%;
     display: flex;
     align-items: center;
+    width: 90%;
 }
 
 /* Text Style */
-.button-text {
+.button-text1 {
     line-height: 25px;
-    text-align: center;
-    font-size: 25px;
+    text-align:center;
     /* Adjust the font size */
     font-weight: 800;
+    font-size: 1.3em;
+    margin-left: 10%;
+}
+.button-text2 {
+    line-height: 25px;
+    text-align:center;
+    /* Adjust the font size */
+    font-weight: 800;
+    font-size: 1.3em;
+    margin-left: 30%;
 }
 
 /* Hover effect (optional) */
@@ -438,6 +447,42 @@ body {
     /* Change the background color on hover */
 }
 
+@media screen and (max-width: 1700px) {
+    .registration-icon {
+        margin-left: 15%;
+        width: 70%;
+    }
+    .button-text1 {
+        font-size: 1.2em;
+        margin-left: 8%;
+    }
+    .button-text2 {
+        font-size: 1.2em;
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .registration-icon {
+        margin-left: 10%;
+        width: 60%;
+    }
+    .button-text1 {
+        font-size: 1.1em;
+        margin-left: 6%;
+    }
+    .button-text2 {
+        font-size: 1.1em;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .button-text1 {
+        margin-left: -20%;
+    }
+    .button-text2 {
+        margin-left: 0%;
+    }
+}
 
 
 .news-container {
@@ -627,37 +672,68 @@ body {
 }
 
 #datetime-container {
-    background-image: linear-gradient(to right, #5897be 10%, #26a0da 41%, #3574d1 100%);
+    background-image: linear-gradient(to right, #79a3bd 10%, #59b4df 41%, #5b8bd3 100%);
     border: 2px solid #173518;
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px; /* Add some padding inside the container */
-    text-align: center; /* Center-align the text */
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
     position: fixed;
     left: 20px;
-    width: 265px;
-    margin-top: 5px; /* Adjust the distance from the icon */
-    transition: top 0.3s ease; /* Add a smooth transition for the 'top' property */
-    opacity: 0; /* Initially set to be invisible */
-}
-
-#datetime {
-    font-size: 74px;
-    /* Adjust the font size for hours and minutes */
-    color: #fff;
-    /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Text shadow for better visibility */
+    width: 14%;
     margin-top: 5px;
-    /* Adjust the distance from the icon */
-    display: block;
-    /* Ensure the text wraps to the next line */
+    transition: top 0.3s ease;
+    opacity: 0;
+  }
+  
+  @media screen and (max-width: 1600px) {
+    #datetime-container {
+        display: none;
+    }
 }
 
-#date {
-    font-size: 24px;
-    /* Adjust the font size for day and month */
-    color: #fff;
-    /* Text color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Text shadow for better visibility */
-}
+#calendar {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  #calendar {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  #calendar-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+  
+  .calendar-table {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: solid 1px black;
+  }
+  
+  .calendar-cell {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000000;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .calendar-cell:hover {
+    background-color: #c9c9c9;
+  }
+  /* Add this CSS to style the dates from previous and next months */
+.calendar-cell.other-month {
+    color: #8a8a8a; /* Light grey color */
+    background-color: #cecece;
+  }
+  
+  .today {
+    background-color: #56d63d;
+    font-weight: bold;
+  }
+  
