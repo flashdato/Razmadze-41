@@ -95,7 +95,6 @@
   <script>
     const datetimeContainer = document.getElementById('datetime-container');
     const calendarElement = document.getElementById('calendar');
-    const containerTop = 500; // The minimum top position where it should disappear
 
     function updateCalendar() {
   const now = new Date();
@@ -167,12 +166,6 @@ setInterval(updateCalendar, 10000);
     window.addEventListener('scroll', function () {
       const scrollY = window.scrollY;
 
-      // Check if the container should be visible or hidden
-      if (scrollY >= containerTop) {
-        datetimeContainer.style.opacity = '1'; // Make it visible
-      } else {
-        datetimeContainer.style.opacity = '0'; // Make it invisible
-      }
     });
 
 

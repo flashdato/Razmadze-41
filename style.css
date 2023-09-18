@@ -677,12 +677,12 @@ body {
     border-radius: 20px;
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: absolute;
+    top: 520px;
     left: 20px;
     width: 14%;
     margin-top: 5px;
     transition: top 0.3s ease;
-    opacity: 0;
   }
   
   @media screen and (max-width: 1600px) {
