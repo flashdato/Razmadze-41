@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/additional_news/finansuri_forma/finansuri_forma.jpg',
+        title: '  2022 წლის ფინანსური ანგარიშგების ფორმა',
+        date: '20 სექტემბერი, 2023',
+        description: 'სსიპ ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის 2022 წლის ფინანსური ანგარიშგების ფორმა',
+        link: '/About_Us/saswavlo_gegma/finansuri_forma.html',
+    },
+    {
         imageSrc: '/images/news/news_9/news9.jpg',
         title: '  "ნიჭიერთა საღამო სკოლის" წრე ფიზიკასა და მათემატიკაში',
         date: '18 სექტემბერი, 2023',
