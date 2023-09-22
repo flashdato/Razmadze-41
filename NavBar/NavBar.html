@@ -41,6 +41,82 @@
       });
     }
   }
+  const datetimeContainer = document.getElementById('datetime-container');
+  const calendarElement = document.getElementById('calendar');
+
+  function updateCalendar() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const day = now.getDate();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDayOfWeek = new Date(year, month, 1).getDay(); // 0 is Sunday, 1 is Monday, etc.
+
+    const calendarTitle = document.getElementById('calendar-title');
+    const calendarTable = document.getElementById('calendar-table');
+
+    const georgianMonths = [
+      'იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
+      'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'
+    ];
+
+    calendarTitle.textContent = `${georgianMonths[month]}`;
+
+    calendarTable.innerHTML = '';
+
+    let dayCount = 1;
+    for (let i = 0; i < 42; i++) {
+      const calendarCell = document.createElement('div');
+      calendarCell.classList.add('calendar-cell');
+
+      if (i >= firstDayOfWeek && dayCount <= daysInMonth) {
+        calendarCell.textContent = dayCount;
+
+        if (year === now.getFullYear() && month === now.getMonth() && dayCount === day) {
+          calendarCell.classList.add('today');
+        }
+
+        dayCount++;
+      } else {
+        // Display numbers for previous and next months in grey color
+        if (i < firstDayOfWeek) {
+          calendarCell.textContent = new Date(year, month - 1, i - firstDayOfWeek + 1).getDate();
+          calendarCell.classList.add('other-month');
+        } else {
+          calendarCell.textContent = new Date(year, month + 1, i - daysInMonth - firstDayOfWeek + 1).getDate();
+          calendarCell.classList.add('other-month');
+        }
+      }
+
+      calendarTable.appendChild(calendarCell);
+    }
+  }
+
+  // Initial call to set the date and time
+  updateCalendar();
+
+  // Update the calendar every second
+  setInterval(updateCalendar, 1000);
+
+
+
+
+  // Initial call to set the calendar
+  updateCalendar();
+
+  // Update the calendar when the page loads
+  window.addEventListener('load', updateCalendar);
+
+  // Update the calendar when the window is resized
+  window.addEventListener('resize', updateCalendar);
+
+  // Update the calendar when the user scrolls
+  window.addEventListener('scroll', function () {
+    const scrollY = window.scrollY;
+
+  });
+
+
 </script>
 
 <body>
@@ -303,6 +379,12 @@
   </div>
 
   <hr>
+  <div id="datetime-container">
+    <div id="calendar">
+      <div id="calendar-title"></div>
+      <div class="calendar-table" id="calendar-table"></div>
+    </div>
+  </div>
 </body>
 
 <style>
@@ -541,6 +623,75 @@
     color: white;
   }
 
+  #datetime-container {
+    background-image: linear-gradient(to right, #79a3bd 10%, #59b4df 41%, #5b8bd3 100%);
+    border: 2px solid #173518;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 620px;
+    left: 20px;
+    width: 14%;
+    margin-top: 5px;
+    transition: top 0.3s ease;
+  }
+
+  @media screen and (max-width: 1600px) {
+    #datetime-container {
+      display: none;
+    }
+  }
+
+  #calendar {
+    font-size: 16px;
+    color: #000;
+  }
+
+  #calendar {
+    font-size: 16px;
+    color: #000;
+  }
+
+  #calendar-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+
+  .calendar-table {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: solid 1px black;
+  }
+
+  .calendar-cell {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000000;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .calendar-cell:hover {
+    background-color: #c9c9c9;
+  }
+
+  /* Add this CSS to style the dates from previous and next months */
+  .calendar-cell.other-month {
+    color: #8a8a8a;
+    /* Light grey color */
+    background-color: #cecece;
+  }
+
+  .today {
+    background-color: #56d63d;
+    font-weight: bold;
+  }
+
+
   @media screen and (max-width: 1000px) {
     .header button {
       align-items: center;
@@ -549,6 +700,10 @@
 
     .banner {
       height: 25vh !important;
+    }
+
+    #datetime-container {
+      display: none !important;
     }
   }
 
