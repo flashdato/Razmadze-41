@@ -439,6 +439,28 @@ body {
     width: 14%;
 }
 
+.registration-button-lopus {
+    position: absolute;
+    margin-top: 400px;
+    left: 85%;
+    /* Adjust the distance from the left */
+    background-image: linear-gradient(to right, #c9b927 0%, #0069f2 100%);
+    border: 2px solid #173518;
+    color: #fff;
+    /* Button text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.829);
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    /* Make the content of the button flex */
+    align-items: center;
+    /* Vertically align content */
+    width: 14%;
+}
+
 /* Icon Style */
 .registration-icon {
     /* Adjust the width of the icon */
