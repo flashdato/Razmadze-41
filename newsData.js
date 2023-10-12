@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/LOPUS_HD.png',
+        title: 'Lopus Electronics ის საგანმანათლებლო წრეები',
+        date: '12 ოქტომბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 საჯარო სკოლაში ფუნქციონირებას იწყებს Lopus Electronics-ის წრეები',
+        link: '/Clubs and Curses/clubs/lopus.html',
+    },
+    {
         imageSrc: '/images/news/news_17/news17.jpg',
         title: 'ტრენინგ-კურსი „ენერგოეფექტურობა და მწვანე შენობები“',
         date: '4 ოქტომბერი, 2023',
@@ -8,7 +15,7 @@ const newsData = [
     },
     {
         imageSrc: '/images/news/news_16/news16.jpg',
-        title: 'არდუინოს პროგრამირებისა და ელექტროინჟინერიის წრე',
+        title: 'GREDA-სა და USAID-ის ენერგეტიკული მომავლის უზრუნველყოფის პროგრამა',
         date: '4 ოქტომბერი, 2023',
         description: 'GREDA-სა და USAID-ის ენერგეტიკული მომავლის უზრუნველყოფის პროგრამის ერთობლივი საგანმანათლებლო პროექტის შემაჯამებელი ღონისძიება',
         link: '/News_Feed/news_16.html',
