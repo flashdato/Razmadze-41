@@ -1,10 +1,10 @@
 const newsData = [
     {
-        imageSrc: '/images/LOPUS_HD.png',
-        title: 'Lopus Electronics ის საგანმანათლებლო წრეები',
-        date: '12 ოქტომბერი, 2023',
-        description: 'ანდრია რაზმაძის სახელობის N41 საჯარო სკოლაში ფუნქციონირებას იწყებს Lopus Electronics-ის წრეები',
-        link: '/Clubs and Curses/clubs/lopus.html',
+        imageSrc: 'images/news/news_18/news18.jpg',
+        title: 'სკოლის ავტორიზაცია',
+        date: '16 ოქტომბერი, 2023',
+        description: '2023 წლის 13 ოქტომბერს, ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლამ წარმატებით გაიარა ავტორიზაცია და ეს სტატუსი მიენიჭა 6 წლის ვადით!',
+        link: '/News_Feed/news_18.html',
     },
     {
         imageSrc: '/images/news/news_17/news17.jpg',
