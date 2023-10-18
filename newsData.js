@@ -1,6 +1,6 @@
 const newsData = [
     {
-        imageSrc: '/images/LOPUS_HD.png',
+        imageSrc: '/images/additional_news/Lopus Clubs/ელექტროინჟინერია (Arduino) I ჯგუფი (copy).png',
         title: 'Lopus Electronics ის საგანმანათლებლო წრეები',
         date: '17 ოქტომბერი, 2023',
         description: 'ანდრია რაზმაძის სახელობის N41 საჯარო სკოლაში 17 ოქტომბერს ფუნქციონირებას იწყებს Lopus Electronics-ის წრეები',
