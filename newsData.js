@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_19/news19.png',
+        title: '„გალფის“ ერთწლიანი სტიპენდია',
+        date: '25 ოქტომბერი, 2023',
+        description: '100 საუკეთესო პირველკურსელს შორის მოხვედრილი ჩვენი სკოლის 4 კურსდამთავრებული ყოველთვიურად 300 ლარიან სტიპენდიას მიიღებს',
+        link: '/News_Feed/news_19.html',
+    },
+    {
         imageSrc: '/images/additional_news/Lopus Clubs/ელექტროინჟინერია (Arduino) I ჯგუფი (copy).png',
         title: 'Lopus Electronics ის საგანმანათლებლო წრეები',
         date: '17 ოქტომბერი, 2023',
