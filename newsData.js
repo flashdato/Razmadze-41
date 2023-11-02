@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_20/news20.jpg',
+        title: 'სადირექციო წერის განრიგი',
+        date: '2 ნოემბერი, 2023',
+        description: 'თუ მოსწავლე ვერ ახერხებს წერაზე გამოცხადებას, მშობელმა ან კანონიერმა წარმომადგენელმა ამის შესახებ უნდა შეატყობინოს სკოლას წერამდე...',
+        link: '/News_Feed/news_20.html',
+    },
+    {
         imageSrc: 'images/news/news_19/news19.png',
         title: '„გალფის“ ერთწლიანი სტიპენდია',
         date: '25 ოქტომბერი, 2023',
