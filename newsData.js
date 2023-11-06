@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
+        title: '7 კლასი - სადირექციო წერები',
+        date: '6 ნოემბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N1 სადირექციო წერები ფიზიკასა და მათემატიკაში',
+        link: '/School exams/sadireqcio_werebi/sadireqcio_wera_7.html',
+    },
+    {
         imageSrc: 'images/news/news_20/news20.jpg',
         title: 'სადირექციო წერის განრიგი',
         date: '2 ნოემბერი, 2023',

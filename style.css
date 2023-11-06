@@ -607,12 +607,14 @@ body {
 /* Base styles for the button */
 .PDF_Button {
     margin-top: 10%;
+    margin-left: 10%;
     display: inline-block;
-    padding: 12px 24px;
+    padding: 18px 24px;
     background-color: #3498db;
     /* Change the background color */
     color: #ffffff;
     /* Change the text color */
+    width: 80%;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
@@ -631,7 +633,7 @@ body {
 /* On click, give a subtle click effect */
 .PDF_Button:active {
     transform: translateY(1px);
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.192);
 }
 
 #next-page,
