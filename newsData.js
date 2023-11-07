@@ -1,5 +1,26 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_21/news21.jpg',
+        title: '"ტვინების ბრძოლა"',
+        date: '7 ნოემბერი, 2023',
+        description: ' 27 ოქტომბერს ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლაში ჩატარდა გუნდურ-ინტელეტუალური ჩემპიონატი - "ტვინების ბრძოლა"',
+        link: '/News_Feed/news_21.html',
+    },
+    {
+        imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
+        title: '9 კლასი - სადირექციო წერები',
+        date: '7 ნოემბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N1 სადირექციო წერები ფიზიკასა და მათემატიკაში',
+        link: '/School exams/sadireqcio_werebi/sadireqcio_wera_9.html',
+    },
+    {
+        imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
+        title: '8 კლასი - სადირექციო წერები',
+        date: '7 ნოემბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N1 სადირექციო წერები ფიზიკასა და მათემატიკაში',
+        link: '/School exams/sadireqcio_werebi/sadireqcio_wera_8.html',
+    },
+    {
         imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
         title: '7 კლასი - სადირექციო წერები',
         date: '6 ნოემბერი, 2023',
