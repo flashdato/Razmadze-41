@@ -1,6 +1,13 @@
 const newsData = [
     {
         imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
+        title: '11 კლასი - სადირექციო წერები',
+        date: '7 ნოემბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N1 სადირექციო წერები ფიზიკასა და მათემატიკაში',
+        link: '/School exams/sadireqcio_werebi/sadireqcio_wera_11.html',
+    },
+    {
+        imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
         title: '10 კლასი - სადირექციო წერები',
         date: '7 ნოემბერი, 2023',
         description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N1 სადირექციო წერები ფიზიკასა და მათემატიკაში',
