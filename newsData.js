@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_22/news22.jpg',
+        title: 'ლილე სვანაძე "მაია ჩიბურდანიძის თასის" გამარჯვებულია',
+        date: '12 ნოემბერი, 2023',
+        description: '  კიდევ ერთი გამარჯვება! მეორეკლასელმა ლილე სვანაძემ ,,მაია ჩიბურდანიძის თასი -2023,, ღია ტურნირზე ...',
+        link: '/News_Feed/news_22.html',
+    },
+    {
         imageSrc: 'images/additional_news/sadireqcio werebi/sadireqcio_werebi.jpg',
         title: '11 კლასი - სადირექციო წერები',
         date: '7 ნოემბერი, 2023',
