@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/additional_news/school_projects/school_projects4/school_projects4.jpg',
+        title: '  „ფიფქია და შვიდი ჯუჯა“',
+        date: '22 ნოემბერი, 2023',
+        description: 'მე-4გ კლასის მოსწავლეებმა ინგლისურის მასწავლებელ ნათია ყანჩაველის ხელმძღვანელობით წარმოადგინეს პროექტი „ფიფქია და შვიდი ჯუჯა“...',
+        link: '/Projects_and_memoranda/school_projects/school_project_4.html',
+    },
+    {
         imageSrc: 'images/jautikovi.jpg',
         title: 'ჟაუტიკოვის სახელობის მე-20 ოლიმპიადის შესარჩევი ტური',
         date: '21 ნოემბერი, 2023',
