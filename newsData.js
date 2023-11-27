@@ -1,9 +1,9 @@
 const newsData = [
     {
         imageSrc: 'images/jautikovi.jpg',
-        title: 'ჟაუტიკოვის სახელობის მე-20 ოლიმპიადის II ტური',
+        title: 'ჟაუტიკოვის მე-20 ოლიმპიადის ამოცანები და ამოხსნები',
         date: '22 ნოემბერი, 2023',
-        description: 'ჟაუტიკოვის სახელობის მე-20 ოლიმპიადის შესარჩევი და II ტურის ამოცანები...',
+        description: 'ჟაუტიკოვის სახელობის მე-20 ოლიმპიადის შესარჩევი და II ტურის ამოცანები ფიზიკასა და მათემატიკაში...',
         link: '/Projects_and_memoranda/olimpiada/jautikovi/jautikovi.html',
     },
     {
