@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_26/news26.jpg',
+        title: ' Lopus - ის ელექტროინჟინერიის წრეზე სიახლეა',
+        date: '29 ნოემბერი, 2023',
+        description: ' წრის მოსწავლეებს დაურიგდათ არდუინოს ნაკრებები რომლებსაც გამოიყენებენ ბევრი საინტერესო პროექტის ასაწყობად ...',
+        link: '/News_Feed/news_26.html',
+    },
+    {
         imageSrc: 'images/news/news_25/news25.jpg',
         title: 'პროგრამა eTwinning-ის 10 წლის იუბილე',
         date: '29 ნოემბერი, 2023',
