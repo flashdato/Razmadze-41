@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_25/news25.jpg',
+        title: 'პროგრამა eTwinning-ის 10 წლის იუბილე',
+        date: '29 ნოემბერი, 2023',
+        description: ' 27 ნოემბერს მასწავლებელთა პროფესიული განვითარების ეროვნული ცენტრის ინიციატივით ...',
+        link: '/News_Feed/news_25.html',
+    },
+    {
+        imageSrc: 'images/news/news_24/news24.jpg',
+        title: 'პროგრამა eTwinning',
+        date: '29 ნოემბერი, 2023',
+        description: 'პროგრამა eTwinning-ის ფარგლებში გამართულ კონფერენციაზე ...',
+        link: '/News_Feed/news_24.html',
+    },
+    {
         imageSrc: 'images/jautikovi.jpg',
         title: 'ჟაუტიკოვის მე-20 ოლიმპიადის ამოცანები და ამოხსნები',
         date: '22 ნოემბერი, 2023',
@@ -7,7 +21,7 @@ const newsData = [
         link: '/Projects_and_memoranda/olimpiada/jautikovi/jautikovi.html',
     },
     {
-        imageSrc: '/images/additional_news/school_projects/school_projects4/school_projects4.jpg',
+        imageSrc: '/images/additional_news/school_projects/school_project4/school_project4.jpg',
         title: '  „ფიფქია და შვიდი ჯუჯა“',
         date: '22 ნოემბერი, 2023',
         description: 'მე-4გ კლასის მოსწავლეებმა ინგლისურის მასწავლებელ ნათია ყანჩაველის ხელმძღვანელობით წარმოადგინეს პროექტი „ფიფქია და შვიდი ჯუჯა“...',
