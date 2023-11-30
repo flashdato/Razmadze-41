@@ -20,19 +20,16 @@
   const subMenus = $('.sub-menu');
   const menuLinks = $('.menu-link');
 
-
   function smallScreenMenu() {
     if ($(window).innerWidth() <= 1200) {
-      // Code for small screens
-      menuLinks.each(function (index, element) {
-        $(element).click(function () {
-          $(element).next().slideToggle();
+      menuLinks.each(function (item) {
+        $(this).click(function () {
+          $(this).next().slideToggle();
         });
       });
     } else {
-      // Code for larger screens
-      menuLinks.each(function (index, element) {
-        $(element).off('click');
+      menuLinks.each(function (item) {
+        $(this).off('click');
       });
     }
   }
@@ -89,7 +86,7 @@
           calendarCell.textContent = new Date(year, month + 1, i - daysInMonth - firstDayOfWeek + 1).getDate();
           calendarCell.classList.add('other-month');
         }
-      } ი
+      }ი
 
       calendarTable.appendChild(calendarCell);
     }
@@ -178,12 +175,9 @@
               <div style="width: 95%;" class="sub-menu-item">
                 <h4>ოლიმპიადები</h4>
                 <ul>
-                  <li><a
-                      href="/Projects_and_memoranda/olimpiada/erovnuli saswavlo olimpiada/erovnuli_saswavlo_olimpiada.html">ეროვნული
-                      სასწავლო ოლიმპიადა</a></li>
+                  <li><a href="/Projects_and_memoranda/olimpiada/erovnuli saswavlo olimpiada/erovnuli_saswavlo_olimpiada.html">ეროვნული სასწავლო ოლიმპიადა</a></li>
                   <li class="inprogress-li"><a class="inprogress-link" href="#">ნორჩ ნატურალისტთა ოლიმპიადა</a></li>
-                  <li><a href="/Projects_and_memoranda/olimpiada/jautikovi/jautikovi.html">ჟაუტიკოვის ოლიმპიადის
-                      შესარჩევი</a></li>
+                  <li><a href="/Projects_and_memoranda/olimpiada/jautikovi/jautikovi.html">ჟაუტიკოვის ოლიმპიადის შესარჩევი</a></li>
                   <li class="inprogress-li"><a class="inprogress-link" href="#">ფიზიკის ევროპის ოლიმპიადა</a></li>
                   <li class="inprogress-li"><a class="inprogress-link" href="#">გოგონათა ევროპის ოლიმპიადა</a></li>
                   <li class="inprogress-li"><a class="inprogress-link" href="#">"საერთაშორისო ოლიმპიადები"</a></li>
@@ -240,8 +234,7 @@
                     </a></li>
                   <li class="inprogress-li"><a class="inprogress-link" href="#">მისაღები გამოცდის პროგრამა (ფიზიკა) </a>
                   </li>
-                  <li><a href="/School exams/Additional_info/sadireqcio_wera_ganrigi.html">სადირექციო წერის განრიგი</a>
-                  </li>
+                  <li><a href="/School exams/Additional_info/sadireqcio_wera_ganrigi.html">სადირექციო წერის განრიგი</a></li>
                 </ul>
               </div>
               <!-- end of item -->

@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_27/news27.png',
+        title: ' Lopus - ის ელექტროინჟინერიის წრეზე სიახლეა',
+        date: '30 ნოემბერი, 2023',
+        description: ' სკოლაში LOPUS-ის ორგანიზებით ჩატარდება STEM ოლიმპიადის ...',
+        link: '/News_Feed/news_27.html',
+    },
+    {
         imageSrc: 'images/news/news_26/news26.jpg',
         title: ' Lopus - ის ელექტროინჟინერიის წრეზე სიახლეა',
         date: '29 ნოემბერი, 2023',
