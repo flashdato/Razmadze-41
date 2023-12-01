@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_28/news28.jpg',
+        title: '  შიდასასკოლო შეჯიბრი STEM - ში',
+        date: '1 დეკემბერი, 2023',
+        description: 'სკოლაში ჩატარდა შიდასასკოლო ჩემპიონატი STEM ოლიმპიადაში ...',
+        link: '/News_Feed/news_28.html',
+    },
+    {
         imageSrc: 'images/news/news_27/news27.png',
         title: ' Lopus - ის ელექტროინჟინერიის წრეზე სიახლეა',
         date: '30 ნოემბერი, 2023',
