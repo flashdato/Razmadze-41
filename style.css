@@ -636,6 +636,37 @@ body {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.192);
 }
 
+.PDF_Button2 {
+    margin-top: 1%;
+    margin-left: 20%;
+    display: inline-block;
+    padding: 18px 24px;
+    background-color: #3498db;
+    /* Change the background color */
+    color: #ffffff;
+    /* Change the text color */
+    width: 60%;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* On hover, change the background color slightly */
+.PDF_Button2:hover {
+    background-color: #2980b9;
+    /* Change the hover background color */
+}
+
+/* On click, give a subtle click effect */
+.PDF_Button2:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.192);
+}
+
 #next-page,
 #prev-page {
     background-color: #6fa4e1;
