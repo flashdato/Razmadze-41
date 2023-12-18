@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_30/news30.jpeg',
+        title: 'II სადირექციო წერის განრიგი',
+        date: '18 დეკემბერი, 2023',
+        description: 'თუ მოსწავლე ვერ ახერხებს წერაზე გამოცხადებას, მშობელმა ან კანონიერმა...',
+        link: '/News_Feed/news_30.html',
+    },
+    {
+        imageSrc: 'images/news/news_29/news29.jpeg',
+        title: '"დავით ჩირაძის მემორიალი"',
+        date: '18 დეკემბერი, 2023',
+        description: 'ქუთაისში გაიმართა "დავით ჩირაძის მემორიალი" 7 წლამდე მოჭადრაკეთა შორის გუნდური ჩემპიონატი...',
+        link: '/News_Feed/news_29.html',
+    },
+    {
         imageSrc: 'images/news/news_28/news28.jpg',
         title: '  შიდასასკოლო შეჯიბრი STEM - ში',
         date: '1 დეკემბერი, 2023',
@@ -160,13 +174,13 @@ const newsData = [
         description: 'ანდრია რაზმაძის სახელობის N41 საჯარო სკოლაში ფუნქციონირებას იწყებს საიტების აწყობის წრე',
         link: '/News_Feed/news_14.html',
     },
-    {
-        imageSrc: '/images/news/news_13/news13.jpg',
-        title: ' ანდროიდ აპლიკაციების აწყობის კურსი',
-        date: '3 ოქტომბერი, 2023',
-        description: 'ანდრია რაზმაძის სახელობის N41 საჯარო სკოლაში ფუნქციონირებას იწყებს ანდროიდ აპლიკაციების აწყობის კურსი',
-        link: '/News_Feed/news_13.html',
-    },
+    // {
+    //     imageSrc: '/images/news/news_13/news13.jpg',
+    //     title: ' ანდროიდ აპლიკაციების აწყობის კურსი',
+    //     date: '3 ოქტომბერი, 2023',
+    //     description: 'ანდრია რაზმაძის სახელობის N41 საჯარო სკოლაში ფუნქციონირებას იწყებს ანდროიდ აპლიკაციების აწყობის კურსი',
+    //     link: '/News_Feed/news_13.html',
+    // },
     {
         imageSrc: '/images/news/news_12/news12.jpg',
         title: ' WRO - ლეგოს რობოტიკის წრე',
