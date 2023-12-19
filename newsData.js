@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_31/news31.jpg',
+        title: '"ტვინების ბრძოლის" რეგიონული ტური',
+        date: '19 დეკემბერი, 2023',
+        description: '"ბომბი გუნდი" "ტვინების ბრძოლის" რეგიონული ტურის ნახევარფინალში ...',
+        link: '/News_Feed/news_31.html',
+    },
+    {
         imageSrc: 'images/news/news_30/news30.jpeg',
         title: 'II სადირექციო წერის განრიგი',
         date: '18 დეკემბერი, 2023',
