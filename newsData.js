@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_30/news30.jpeg',
+        title: 'II სადირექციო წერის ნიმუშები (მათემატიკა)',
+        date: '25 დეკემბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N2 სადირექციო წერის ნიმუშები',
+        link: '/News_Feed/news_32.html',
+    },
+    {
         imageSrc: 'images/news/news_31/news31.jpg',
         title: '"ტვინების ბრძოლის" რეგიონული ტური',
         date: '19 დეკემბერი, 2023',
