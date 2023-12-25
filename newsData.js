@@ -1,6 +1,13 @@
 const newsData = [
     {
-        imageSrc: 'images/news/news_30/news30.jpeg',
+        imageSrc: 'images/news/news_33/news33.jpeg',
+        title: 'საკვირაო სკოლის I მოდულის ოლიმპიადა',
+        date: '25 დეკემბერი, 2023',
+        description: 'სკოლის I მოდულის ოლიმპიადა IV-VI კლასის მოსწავლეებისთვის...',
+        link: '/News_Feed/news_33.html',
+    },
+    {
+        imageSrc: 'images/news/news_32/news32.jpeg',
         title: 'II სადირექციო წერის ნიმუშები (მათემატიკა)',
         date: '25 დეკემბერი, 2023',
         description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N2 სადირექციო წერის ნიმუშები',
