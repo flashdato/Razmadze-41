@@ -1,5 +1,26 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_35/news35.jpg',
+        title: '„რობოტების ბრძოლა - Sumo Challenge-ს“',
+        date: '30 დეკემბერი, 2023',
+        description: 'სკოლა აცხადებს „რობოტების ბრძოლა - Sumo Challenge“ ...',
+        link: 'News_Feed/news_35.html',
+    },
+    {
+        imageSrc: 'images/news/news_34/news34.jpeg',
+        title: 'საშობაო საჭადრაკო  ტურნირის გამარჯვებული',
+        date: '30 დეკემბერი, 2023',
+        description: 'მოაწავლეებმა დამრიგებელ ნანა კიკვიძის ხელმძღვანელობით წარმოადგინეს პროექტი "მზის სისტემა"....',
+        link: 'News_Feed/news_34.html',
+    },
+    {
+        imageSrc: '/images/gallery/ზეიმი/IIIგ კლასი/event3_1.jpeg',
+        title: 'პროექტი "მზის სისტემა"',
+        date: '30 დეკემბერი, 2023',
+        description: 'მოაწავლეებმა დამრიგებელ ნანა კიკვიძის ხელმძღვანელობით წარმოადგინეს პროექტი "მზის სისტემა"....',
+        link: '/Gallery/events/event_3.html',
+    },
+    {
         imageSrc: 'images/news/news_33/news33.jpeg',
         title: 'საკვირაო სკოლის I მოდულის ოლიმპიადა',
         date: '25 დეკემბერი, 2023',
