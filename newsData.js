@@ -1,5 +1,40 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_32/news32.jpeg',
+        title: 'II სადირექციო წერის ნიმუშები (ფიზიკა)',
+        date: '31 დეკემბერი, 2023',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N2 სადირექციო წერის ნიმუშები',
+        link: '/News_Feed/news_40.html',
+    },
+    {
+        imageSrc: 'images/news/news_39/news39.jpeg',
+        title: ' საერთაშორისო ოლიმპიადა (IZhO) მათემატიკაში',
+        date: '31 დეკემბერი, 2023',
+        description: 'ყაზახეთის ქალაქ ალმათიში 2024 წლის 8-13 იანვარს იმართება ჟაუტიკოვის ოლიმპიადა (IZhO) მათემატიკაში...',
+        link: 'News_Feed/news_39.html',
+    },
+    {
+        imageSrc: 'images/news/news_38/news38_1.jpg',
+        title: 'საახალწლო საქველმოქმედო აქცია',
+        date: '31 დეკემბერი, 2023',
+        description: 'სკოლის V კლასის მოსწავლეები და მასწავლებლები ეწვივნენ ქუთაისის ხანდაზმულთა პანსიონატს ...',
+        link: 'News_Feed/news_38.html',
+    },
+    {
+        imageSrc: 'images/news/news_37/news37.jpg',
+        title: 'საახალწლო საქველმოქმედო აქცია',
+        date: '31 დეკემბერი, 2023',
+        description: 'სკოლის მოსწავლეები და მასწავლებლები ეწვივნენ ქუთაისის ხანდაზმულთა პანსიონატს ...',
+        link: 'News_Feed/news_37.html',
+    },
+    {
+        imageSrc: 'images/news/news_36/news36_9.jpg',
+        title: 'საახალწლო კარნავალი',
+        date: '30 დეკემბერი, 2023',
+        description: '2023 წლის 25-26 დეკემბერს სკოლაში სკოლის სამოქალაქო კლუბი ...',
+        link: 'News_Feed/news_36.html',
+    },
+    {
         imageSrc: 'images/news/news_35/news35.jpg',
         title: '„რობოტების ბრძოლა - Sumo Challenge-ს“',
         date: '30 დეკემბერი, 2023',
