@@ -1,6 +1,34 @@
 const newsData = [
     {
-        imageSrc: 'images/news/news_32/news32.jpeg',
+        imageSrc: '/images/additional_news/school_projects/school_projects12/school_project12.jpg',
+        title: 'პროექტი ოთარ თაქთაქიშვილზე',
+        date: '31 იანვარი, 2024',
+        description: 'მასწავლებელ ქეთევან მაღლაფერიძის ხელმძღვანელობით წარმოადგინეს პროექტი დიდი ქართველი ...',
+        link: '/Projects_and_memoranda/school_projects/school_project_12.html',
+    },
+    {
+        imageSrc: '/images/additional_news/school_projects/school_projects11/school_project11_2.jpg',
+        title: 'ცენტრალური სამუსიკო სასწავლებელი',
+        date: '31 იანვარი, 2024',
+        description: '2024 წლის 18 იანვარს მელიტონ ბალანჩივაძის სახელობის ცენტრალური სამუსიკო ...',
+        link: '/Projects_and_memoranda/school_projects/school_project_11.html',
+    },
+    {
+        imageSrc: 'images/news/news_42/news42.jpg',
+        title: 'საერთაშორისო ოლიმპიადა (IZhO) მოსწავლეებისთვის',
+        date: '31 იანვარი, 2024',
+        description: 'ყაზახეთის რესპუბლიკაში ქალაქ ალმატიში 7-14 იანვარს ჩატარებულ ჟაუტიკოვის XX საერთაშორისო ოლიმპიადაზე',
+        link: '/News_Feed/news_42.html',
+    },
+    {
+        imageSrc: 'images/news/news_41/news41.jpg',
+        title: 'საერთაშორისო ოლიმპიადა (IMPACT) მასწავლებლებისთვის',
+        date: '31 იანვარი, 2024',
+        description: 'ყაზახეთის რესპუბლიკაში ქალაქ ალმატიში 7-14 იანვარს ჩატარებულ IMPACT საერთაშორისო ოლიმპიადაზე',
+        link: '/News_Feed/news_41.html',
+    },
+    {
+        imageSrc: 'images/news/news_40/news40.jpeg',
         title: 'II სადირექციო წერის ნიმუშები (ფიზიკა)',
         date: '31 დეკემბერი, 2023',
         description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N2 სადირექციო წერის ნიმუშები',
