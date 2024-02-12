@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_44/news44.jpg',
+        title: '"მაია ჩიბურდანიძის სახელობის" ჩემპიონატი',
+        date: '12 თებერვალი, 2024',
+        description: '  27 იანვარს ქუთაისის მაია ჩიბურდანიძის სახელობის ჭადრაკის სკოლაში გაიმართა',
+        link: '/News_Feed/news_44.html',
+    },
+    {
+        imageSrc: 'images/news/news_43/news43.jpg',
+        title: '"ტვინების ბრძოლა"',
+        date: '12 თებერვალი, 2024',
+        description: ' გუნდურ-ინტელექტუალური თამაშის ,,ტვინების ბრძოლის" 2023 წლის შემოდგომის',
+        link: '/News_Feed/news_43.html',
+    },
+    {
         imageSrc: '/images/additional_news/school_projects/school_projects12/school_project12.jpg',
         title: 'პროექტი ოთარ თაქთაქიშვილზე',
         date: '31 იანვარი, 2024',
