@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: 'images/news/news_45/news45.jpg',
+        title: ' პროექტი ჭკვიანი სახლის შესახებ',
+        date: '15 თებერვალი, 2024',
+        description: '  პირველ სემესტრის დასასრულს დირექტორის პირველი მოადგილის ქალბატონ... ',
+        link: '/News_Feed/news_45.html',
+    },
+    {
         imageSrc: 'images/news/news_44/news44.jpg',
         title: '"მაია ჩიბურდანიძის სახელობის" ჩემპიონატი',
         date: '12 თებერვალი, 2024',
