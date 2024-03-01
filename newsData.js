@@ -1,7 +1,7 @@
 const newsData = [
     {
         imageSrc: 'images/news/news_45/news45.jpg',
-        title: ' პროექტი ჭკვიანი სახლის შესახებ',
+        title: ' პროექტი ჭკვიანი ქალაქის შესახებ',
         date: '15 თებერვალი, 2024',
         description: '  პირველ სემესტრის დასასრულს დირექტორის პირველი მოადგილის ქალბატონ... ',
         link: '/News_Feed/news_45.html',
