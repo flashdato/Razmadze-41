@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>სასკოლო პროექტები</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/logo3.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <script>
+    $(function () {
+      $("#Nav").load('/NavBar/NavBar.html');
+    });
+    $(function () {
+      $("#Footer").load('/Footer/Footer.html');
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="Nav"></div>
+  <div class="box">
+    <div class="about">
+      <div class="content1">
+        <div class="title">სასკოლო პროექტები</div><br><br>
+        <div class="news-container">
+          <a href="#" class="news-box">
+            <img alt="News 1" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+          <a href="#" class="news-box">
+            <img alt="News 2" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+          <a href="#" class="news-box">
+            <img alt="News 3" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+        </div>
+        <div class="news-container">
+          <a href="#" class="news-box">
+            <img alt="News 4" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+          <a href="#" class="news-box">
+            <img alt="News 5" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+          <a href="#" class="news-box">
+            <img alt="News 6" class="news-image">
+            <div class="news-content">
+              <h3 class="news-header"></h3>
+              <p class="news-date"></p>
+              <p class="news-description"></p>
+            </div>
+          </a>
+        </div>
+        <button id="prev-page">წინა გვერდი</button>
+        <button id="next-page">შემდეგი გვერდი</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="Footer"></div>
+  <script src="./schoolProjectsData.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const newsBoxes = document.querySelectorAll('.news-box');
+      const prevPageButton = document.getElementById('prev-page');
+      const nextPageButton = document.getElementById('next-page');
+      let currentPage = 0;
+
+      function hideNewsBox(newsBox) {
+        newsBox.style.opacity = '0'; // Hide the news box by setting opacity to 0
+        const links = newsBox.querySelectorAll('a');
+        links.forEach(link => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default click behavior
+          });
+        });
+      }
+
+      function showNewsBox(newsBox, newsData) {
+        newsBox.style.opacity = '1'; // Show the news box by setting opacity to 1
+      }
+
+      function fillNewsItems() {
+        for (let i = 0; i < 6; i++) {
+          const currentNewsData = newsData[currentPage + i];
+          const newsBox = newsBoxes[i];
+
+          if (currentNewsData) {
+            // Set the content of the news box using the template literal
+            newsBox.innerHTML = `
+                <a href="${currentNewsData.link}" class="news-box">
+                    <img src="${currentNewsData.imageSrc}" alt="News" class="news-image">
+                    <div class="news-content">
+                        <h3 class="news-header">${currentNewsData.title}</h3>
+                        <p class="news-date">${currentNewsData.date}</p>
+                        <p class="news-description">${currentNewsData.description}</p>
+                    </div>
+                </a>
+            `;
+            showNewsBox(newsBox, currentNewsData);
+          } else {
+            hideNewsBox(newsBox);
+          }
+        }
+
+        nextPageButton.disabled = currentPage + 6 >= newsData.length;
+        prevPageButton.disabled = currentPage === 0;
+      }
+
+      fillNewsItems();
+
+      nextPageButton.addEventListener('click', function () {
+        if (currentPage + 6 < newsData.length) {
+          currentPage += 6;
+          fillNewsItems();
+        }
+      });
+
+      prevPageButton.addEventListener('click', function () {
+        if (currentPage > 0) {
+          currentPage -= 6;
+          fillNewsItems();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
