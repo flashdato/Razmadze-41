@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_54/news54.jpeg',
+        title: 'III სადირექციო წერის ნიმუშები (მათემატიკა)',
+        date: '27 მარტი, 2024',
+        description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N3 სადირექციო წერის ნიმუშები',
+        link: '/News_Feed/news_54.html',
+    },
+    {
         imageSrc: '/images/news/news_53/news_53.jpg',
         title: '"თიბისის განათლების სივრცე"',
         date: '17 მარტი, 2024',
