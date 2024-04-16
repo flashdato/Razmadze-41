@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_59/news59.jpg',
+        title: 'ეკონომიკის ოლიმპიადა',
+        date: '28 მარტი, 2024',
+        description: 'GELi - საქართველოს ეკონომიკური წიგნიერების ინიციატივის ორგანიზებით საქართველოში 2023 ...',
+        link: '/News_Feed/news_59.html',
+    },
+    {
+        imageSrc: '/images/news/news_58/news58.jpg',
+        title: 'ფიზმათის ლიგა',
+        date: '27 მარტი, 2024',
+        description: '1 აპრილიდან სტარტს აიღებს ფიზმათის საფეხბურთო ლიგა და პირველ ამხანაგურ მატჩს გამართავს ...',
+        link: '/News_Feed/news_58.html',
+    },
+    {
         imageSrc: '/images/news/news_57/news57.jpg',
         title: 'ინტელექტუალური თამაში "ინტელექტიადა"',
         date: '27 მარტი, 2024',
@@ -16,14 +30,14 @@ const newsData = [
     {
         imageSrc: '/images/news/news_55/news55.jpeg',
         title: 'III სადირექციო წერის საკითხები (ფიზიკა)',
-        date: '27 მარტი, 2024',
+        date: '20 მარტი, 2024',
         description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N3 სადირექციო წერის ნიმუშები ...',
         link: '/News_Feed/news_55.html',
     },
     {
         imageSrc: '/images/news/news_54/news54.jpeg',
         title: 'III სადირექციო წერის საკითხები (მათემატიკა)',
-        date: '27 მარტი, 2024',
+        date: '20 მარტი, 2024',
         description: 'ანდრია რაზმაძის სახელობის N41 ფიზიკა-მათემატიკის საჯარო სკოლის N3 სადირექციო წერის ნიმუშები ...',
         link: '/News_Feed/news_54.html',
     },
