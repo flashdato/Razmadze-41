@@ -1,5 +1,26 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_62/news62_1.jpg',
+        title: 'ეროვნულის ოლიმპიადის III ტური',
+        date: '5 აპრილი, 2024',
+        description: 'წარმოგიდგენთ სსიპ - ანდრია რაზმაძის სახელობის ქალაქ ქუთაისის №41 ფიზიკა-მათემატიკის ...',
+        link: '/News_Feed/news_62.html',
+    },
+    {
+        imageSrc: '/images/news/news_61/news61.jpg',
+        title: 'ტვინების ბრძოლის ახალი პროექტი',
+        date: '3 აპრილი, 2024',
+        description: 'წარმოგიდგენთ ტვინების ბრძოლის კიდევ ერთი პროექტის - ტვინების ოლიმპიადის ...',
+        link: '/News_Feed/news_61.html',
+    },
+    {
+        imageSrc: '/images/news/news_60/news60.jpg',
+        title: 'ფრანკოფონიის კონკურსის გამარჯვებული',
+        date: '3 აპრილი, 2024',
+        description: 'ფრანგულმა ინსტიტუტმა ფრანკოფონიის დღეების ფარგლებში ჩატარებული კონკურსის გამარჯვებულები ...',
+        link: '/News_Feed/news_60.html',
+    },
+    {
         imageSrc: '/images/news/news_59/news59.jpg',
         title: 'ეკონომიკის ოლიმპიადა',
         date: '28 მარტი, 2024',
