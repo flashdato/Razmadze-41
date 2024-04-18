@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_64/news64.jpg',
+        title: 'ჭაბუკთა შორის იმერეთის ჩემპიონია ლილე სვანაძე',
+        date: '5 აპრილი, 2024',
+        description: '30 მარტიდან 7 აპრილის ჩათვლით ქუთაისის მაია ჩიბურდანიძის სახელობის ...',
+        link: '/News_Feed/news_64.html',
+    },
+    {
+        imageSrc: '/images/news/news_63/news63.jpg',
+        title: 'ჭაბუკთა შორის იმერეთის ჩემპიონია ლუკა სახოკია',
+        date: '6 აპრილი, 2024',
+        description: '30 მარტიდან 7 აპრილის ჩათვლით ქუთაისის მაია ჩიბურდანიძის სახელობის ...',
+        link: '/News_Feed/news_63.html',
+    },
+    {
         imageSrc: '/images/news/news_62/news62_1.jpg',
         title: 'ეროვნულის ოლიმპიადის III ტური',
         date: '5 აპრილი, 2024',
