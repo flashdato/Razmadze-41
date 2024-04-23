@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IATI 2024 ოქროს მედლით დაჯილდოვდა ოთარ ციბაძე</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script>
+        $(function () {
+            $("#Nav").load("/NavBar/NavBar.html");
+        });
+        $(function () {
+            $("#Footer").load("/Footer/Footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">IATI 2024 ოქროს მედლით დაჯილდოვდა ოთარ ციბაძე</div>
+                <p class="infotext">ბულგარეთის ქალაქ შუმენში 16-21 აპრილს გამართულ ინფორმატიკის საერთაშორისო ოლიმპიადაზე
+                    IATI 2024 ოქროს მედლით დაჯილდოვდა ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო
+                    სკოლის IXგ კლასის მოსწავლე ოთარ ციბაძე.</p>
+                <p class="infotext">ოლიმპიადაში მონაწილე 200-მდე მონაწილეს შორის ოთარი საუკეთესო 15 მონაწილეს შორის
+                    მოხვდა.</p>
+                <p class="infotext">IATI - International Advanced Tournament in Informatics - ეს არის ტურნირი, რომელიც
+                    უკვე 15 წელია რაც ტარდება ინფორმატიკის ტოპ ჯუნიორ (16 წლამდე) და სენიორ (16 წელს ზევით) მონაწილეებს
+                    შორის ონლაინ ფორმატში.</p>
+                <p class="infotext">ტურნირის ორგანიზატორები და მასპინძლები ტრადიციულად არიან შუმენის უნივერსიტეტი,
+                    მუნიციპალიტეტი და სკოლა “A&B”. საორგანიზაციო კომიტეტის თავმჯდომარე კი ტრადიციულად ქალბატონი
+                    ბისერკა იოვჩევა.</p>
+                <p class="infotext">აღსანიშნავია, რომ საერთაშორისო ოლიმპიადებზე ოთარისთვის ეს პირველი წარმატება არ არის.
+                    ოთარ ციბაძე ბრინჯაოს მედლით დაჯილდოვდა ჟაუტიკოვის სახელობის XX საერთაშორისო ოლიმპიადაზე, EJOI
+                    2023-ზე და ასევე, Info(1)Cup 2024-ზე.</p>
+                <p class="infotext">მადლობა ოთარ ციბაძის პედაგოგებს: ბ-ნ მალხაზ ჯინჯიხაძეს, ალექსანდრე დგებუაძეს,
+                    დიმიტრი ჯანგველაძეს, ასევე სკოლის ყველა პედაგოგს, რომელთაც ოდნავი წვლილი მაინც მიუძღვით ოთარის
+                    წარმატებაში.</p>
+                <p class="infotext">მადლობა ოთარის მშობლებს, დიდი მოწიწებით ვულოცავთ მათ.</p>
+                <p class="infotext">დამრიგებელი - ქეთინო მაჩალაძე</p>
+                <a class="infotext"
+                    href="https://infos.infosbg.com/files/Contests/IATI/2024/common/results_Junior.pdf">შედეგები იხილეთ
+                    აქ</a>
+                <br />
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="/images/news/news_74/news_74_0.jpg" alt="Image 0" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_74/news_74_1.jpg" alt="Image 1" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_74/news_74_2.jpg" alt="Image 2" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_74/news_74_3.jpg" alt="Image 3" class="grid-image" />
+                    </div>
+                </div>
+                <div class="overlay" id="overlay">
+                    <div class="modal" id="modal">
+                        <img src="" alt="Zoomed Image" id="zoomed-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="Footer"></div>
+    <script>
+        // JavaScript
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+        const zoomedImage = document.getElementById("zoomed-image");
+
+        // Function to open the zoomed image
+        function openImage(src) {
+            zoomedImage.src = src;
+            overlay.style.display = "block";
+            document.documentElement.style.overflow = "hidden"; // Disable scrolling
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        // Function to close the zoomed image
+        function closeImage() {
+            overlay.style.display = "none";
+            document.documentElement.style.overflow = ""; // Enable scrolling
+            document.body.style.overflow = ""; // Enable scrolling
+        }
+
+        // Add a click event listener to the overlay to close the image when clicking outside
+        overlay.addEventListener("click", closeImage);
+
+        // Prevent the click event on the modal from closing the image
+        modal.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        // Example usage to open the image
+        const imageBoxes = document.querySelectorAll(".image-box");
+
+        imageBoxes.forEach(function (imageBox) {
+            const imageSrc = imageBox.querySelector("img").src;
+            imageBox.addEventListener("click", function () {
+                openImage(imageSrc);
+            });
+        });
+    </script>
+</body>
+
+</html>
