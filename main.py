@@ -28,13 +28,24 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options)
 
 print("please input values exactly as requested!")
+
 last_news_id = int(input("Input last news number"))
+
 path_to_news_image_folders = input("Input news image folder (./images/news/)(for security)")
+custom_name_for_images_directory = input("Input custom name for image files DIRECTORY (news_)(will result in images saving into path_to_news_image_folders/news_51/.)")
+custom_name_for_images = input("Input custom name for image files (news_)(will result in news_51_1.jpg)")
+
 path_to_news_feed_files = input("Input path to news feed files like news_1.html (./News_Feed/)(for security)")
+custom_name_for_html_files = input("Input custom name for html files (news_)(will result in news_51.html)")
 
 post_links = []
 with open('links.txt', 'r') as file:
     post_links = file.readlines()
+
+def finish():
+    driver.quit()
+    sys.exit(0)
+
 if(len(post_links) == 0):
     print("No Links Given!")
     finish()
@@ -44,9 +55,20 @@ paragraphs = []
 num_of_images = 0
 
 
-def finish():
-    driver.quit()
-    sys.exit(0)
+def sanitize_paragraph(paragraph):
+    # paragraph_soup = BeautifulSoup(paragraph, 'html.parser')
+    paragraph_soup = paragraph
+    emojis = paragraph_soup.find_all('img')
+
+    for emoji in emojis:
+        emoji.extract()
+    
+    empty_spans = paragraph_soup.find_all('span', recursive=True)
+    for span in empty_spans:
+        if(span.text.strip() == ""):
+            span.extract()
+    
+    return str(paragraph_soup)
 
 def download_image(image_url, save_path, filename):
     os.makedirs(save_path, exist_ok=True)
@@ -102,16 +124,17 @@ def write_html_for_given_details(paragraphs, image_links):
                 <div class="title">სიახლე</div>
     """
     for paragraph in paragraphs:
-        html_content = html_content + '<p class="infotext">' + str(paragraph) + "</p>\n" 
+        sanitized_paragraph = sanitize_paragraph(paragraph)
+        html_content = html_content + '<p class="infotext">' + str(sanitized_paragraph) + "</p>\n" 
     html_content = html_content + "<br />\n"
     if len(image_links) != 0:
         html_content = html_content + '<div class="image-grid">'
         for index,image_link in enumerate(image_links):
-            path_to_save_to = path_to_news_image_folders + "news_" + str(last_news_id) +"/" 
-            filename_to_save_as = "news_" + str(last_news_id) + "_" + str(index) + ".jpg"
+            path_to_save_to = path_to_news_image_folders + custom_name_for_images_directory + str(last_news_id) +"/" 
+            filename_to_save_as = custom_name_for_images + str(last_news_id) + "_" + str(index) + ".jpg"
             new_image_link = download_image(image_link,path_to_save_to,filename_to_save_as)
             html_content = html_content + '<div class="image-box">\n'
-            html_content = html_content + '<img src="/images/news/news_' + str(last_news_id) + '/news_' + str(last_news_id) + '_' + str(index) + '.jpg" alt = "Image ' + str(index) + '" class="grid-image" />\n</div>\n'
+            html_content = html_content + '<img src="' + path_to_news_image_folders[1:] + custom_name_for_images_directory + str(last_news_id) + '/' + custom_name_for_images + str(last_news_id) + '_' + str(index) + '.jpg" alt = "Image ' + str(index) + '" class="grid-image" />\n</div>\n'
         html_content = html_content + '</div>'
     html_content = html_content + """ 
         <div class="overlay" id="overlay">
@@ -167,10 +190,11 @@ def write_html_for_given_details(paragraphs, image_links):
 
     </html>
     """
-    
-    with open(path_to_news_feed_files+"news_"+str(last_news_id)+".html","w") as file:
+
+    os.makedirs(path_to_news_feed_files, exist_ok=True) 
+    with open(path_to_news_feed_files+custom_name_for_html_files+str(last_news_id)+".html","w") as file:
         file.write(html_content)
-    print("HTML file generated successfully for news_" + str(last_news_id))
+    print("HTML file generated successfully for " + custom_name_for_html_files + str(last_news_id))
 
 
 
