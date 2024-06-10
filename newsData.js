@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_101/news101.jpeg',
+        title: 'IV სადირექციო წერის საკითხები ფიზიკაში',
+        date: '10 ივნისი, 2024',
+        description: 'IV სადირექციო წერაზე გამოყენებული საკითხები ფიზიკაში  ...',
+        link: '/News_Feed/news_101.html',
+    },
+    {
         imageSrc: '/images/news/news_100/news_100_0.jpg',
         title: 'ევერესტის გამარჯვებული მონაწილეები',
         date: '4 ივნისი, 2024',
