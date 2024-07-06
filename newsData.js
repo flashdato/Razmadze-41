@@ -1,5 +1,26 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_104/news104.jpeg',
+        title: 'საშუალო საფეხურზე გადასასვლელი გამოცდა ფიზიკაში',
+        date: '7 ივლისი, 2024',
+        description: 'საშუალო საფეხურზე გადასასვლელი გამოცდა ფიზიკაში - 2024  ...',
+        link: '/News_Feed/news_104.html',
+    },
+    {
+        imageSrc: '/images/news/news_103/news103.jpeg',
+        title: 'საშუალო საფეხურზე გადასასვლელი გამოცდა მათემატიკაში - 2024',
+        date: '7 ივლისი, 2024',
+        description: 'საშუალო საფეხურზე გადასასვლელი გამოცდა მათემატიკაში - 2024  ...',
+        link: '/News_Feed/news_103.html',
+    },
+    {
+        imageSrc: '/images/news/news_102/news102.jpeg',
+        title: '2024 წლის 7 კლასის მისაღები გამოცდა',
+        date: '7 ივლისი, 2024',
+        description: '2024 წლის 7 კლასის მისაღები გამოცდა  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+        link: '/News_Feed/news_102.html',
+    },
+    {
         imageSrc: '/images/news/news_101/news101.jpeg',
         title: 'IV სადირექციო წერის საკითხები ფიზიკაში',
         date: '10 ივნისი, 2024',
