@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_105/news105.jpg',
+        title: 'საშემოდგომო გამოცდა ფიზიკაში - 2024',
+        date: '9 ივლისი, 2024',
+        description: 'საშემოდგომო გამოცდა ფიზიკაში - 2024 VII, VIII, X და XII კლასის  ...',
+        link: '/News_Feed/news_105.html',
+    },
+    {
         imageSrc: '/images/news/news_104/news104.jpeg',
         title: 'საშუალო საფეხურზე გადასასვლელი გამოცდა ფიზიკაში',
         date: '7 ივლისი, 2024',
