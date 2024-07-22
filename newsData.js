@@ -112,7 +112,7 @@ const newsData = [
         link: '/News_Feed/news_115.html',
     },
     {
-        imageSrc: '/images/news/news_114/news_114_2.jpg',
+        imageSrc: '/images/news/news_114/news_114_0.jpg',
         title: 'მილენიუმის ფინალისტები',
         date: '19 ივნისი, 2024',
         description: 'ათასწლეულის ინოვაციის კონკურსი - Millennium Innovations Award-ის 2024 წლის ...',
