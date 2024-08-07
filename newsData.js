@@ -3,14 +3,14 @@ const newsData = [
         imageSrc: '/images/news/news_128/news128.jpeg',
         title: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში VI კლასი',
         date: '6 აგვისტო, 2024',
-        description: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში VI კლასი...',
+        description: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში VI კლასი &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...',
         link: '/News_Feed/news_128.html',
     },
     {
         imageSrc: '/images/news/news_127/news127.jpeg',
         title: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში V კლასი',
         date: '6 აგვისტო, 2024',
-        description: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში V კლასი...',
+        description: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში V კლასი &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...',
         link: '/News_Feed/news_127.html',
     },
     {
