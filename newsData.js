@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_128/news128.jpeg',
+        title: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში VI კლასი',
+        date: '6 აგვისტო, 2024',
+        description: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში VI კლასი...',
+        link: '/News_Feed/news_128.html',
+    },
+    {
+        imageSrc: '/images/news/news_127/news127.jpeg',
+        title: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში V კლასი',
+        date: '6 აგვისტო, 2024',
+        description: 'ზაფხულის სკოლის ოლიმპიადა მათემატიკაში V კლასი...',
+        link: '/News_Feed/news_127.html',
+    },
+    {
         imageSrc: '/images/news/news_126/news_126_0.jpg',
         title: 'ოლიმპიადა ინგლისურ ენაში',
         date: '19 ივლისი, 2024',
