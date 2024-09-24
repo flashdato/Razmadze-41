@@ -382,7 +382,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #3574d1 100%);
+    background-image: linear-gradient(to right, #5897be 0%, #26a0da 51%, #d13535 100%);
     color: #ffffff;
     border-radius: 10px;
     margin: 0 10px;
@@ -444,7 +444,7 @@ body {
     margin-top: 400px;
     left: 85%;
     /* Adjust the distance from the left */
-    background-image: linear-gradient(to right, #c9b927 0%, #0069f2 100%);
+    background-image: linear-gradient(to right,#0085f2 0%, #c20c0c 100%);
     border: 2px solid #173518;
     color: #fff;
     /* Button text color */

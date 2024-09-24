@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>რობოტიკის წრე</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script>
+        $(function () {
+            $("#Nav").load("/NavBar/NavBar.html");
+        });
+        $(function () {
+            $("#Footer").load("/Footer/Footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">რობოტიკის წრე</div>
+                <p class="infotext">🤖 გაინტერესებს რობოტების შექმნა და მართვა? 🤖</p>
+                <p class="infotext"> ჩვენი რობოტექნიკის წრე გაძლევს შესაძლებლობას, შექმნა და მართო საკუთარი რობოტები! 💡
+                </p>
+                <p class="infotext"> დარეგისტრირდი ბმულზე და შექმენი მომავლის ტექნოლოგიები ჩვენთან ერთად! 🌟</p>
+                    <a href="https://forms.gle/qx9UagFx1FNqTkZV9" target="_blank">https://forms.gle/qx9UagFx1FNqTkZV9</a>
+                <p class="infotext"> კურსი იწყება ოქტომბერში და გახსნილია მე-5 კლასიდან ნებისმიერი ასაკის მოსწავლისთვის.
+                    აი, რა გელოდება:</p>
+                <p class="infotext"> 🔹 საკლასო სწავლება მთელი წლის განმავლობაში</p>
+                <p class="infotext"> 🔹 მოქნილი გრაფიკი, რომელიც შენი განრიგისთვის იქნება მოსახერხებელი</p>
+                <p class="infotext"> 🔹 მხოლოდ 60 ლარი თვეში!</p>
+                <p class="infotext"> თუ გსურს, შექმნა და გამოსცადო შენი რობოტი და მიიღო პრაქტიკული გამოცდილება, ეს კურსი
+                    ზუსტად შენთვისაა.</p>
+
+                <br />
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="/images/news/news_161/news_161_0.jpg" alt="Image 0" class="grid-image" />
+                    </div>
+                </div>
+                <div class="overlay" id="overlay">
+                    <div class="modal" id="modal">
+                        <img src="" alt="Zoomed Image" id="zoomed-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="Footer"></div>
+    <script>
+        // JavaScript
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+        const zoomedImage = document.getElementById("zoomed-image");
+
+        // Function to open the zoomed image
+        function openImage(src) {
+            zoomedImage.src = src;
+            overlay.style.display = "block";
+            document.documentElement.style.overflow = "hidden"; // Disable scrolling
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        // Function to close the zoomed image
+        function closeImage() {
+            overlay.style.display = "none";
+            document.documentElement.style.overflow = ""; // Enable scrolling
+            document.body.style.overflow = ""; // Enable scrolling
+        }
+
+        // Add a click event listener to the overlay to close the image when clicking outside
+        overlay.addEventListener("click", closeImage);
+
+        // Prevent the click event on the modal from closing the image
+        modal.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        // Example usage to open the image
+        const imageBoxes = document.querySelectorAll(".image-box");
+
+        imageBoxes.forEach(function (imageBox) {
+            const imageSrc = imageBox.querySelector("img").src;
+            imageBox.addEventListener("click", function () {
+                openImage(imageSrc);
+            });
+        });
+    </script>
+</body>
+
+</html>

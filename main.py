@@ -54,6 +54,18 @@ image_links = []
 paragraphs = []
 num_of_images = 0
 
+def checkHTMLForModalRefresh(soup):
+    element = soup.find(class_="x6ikm8r x10wlt62 xbe9js4 x1egiwwb")
+
+    if element:
+        driver.refresh()
+        close_button = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, '[aria-label="Close"]'))
+        )
+        close_button.click()
+        return True
+    else:
+        return False
 
 def sanitize_paragraph(paragraph):
     # paragraph_soup = BeautifulSoup(paragraph, 'html.parser')
@@ -217,6 +229,8 @@ def photo_phase2():
     print("in photo phase...")
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
+    checkHTMLForModalRefresh(soup)
+
 
     images = soup.find_all("img")
     time.sleep(1)
