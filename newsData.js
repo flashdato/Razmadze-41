@@ -1,5 +1,19 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_165/news_165_0.png',
+        title: 'საკვირაო სკოლის კრებული მე-4 კლასის',
+        date: '1 ოქტომბერი, 2024',
+        description: 'საკვირაო სკოლის კრებული მათემატიკაში მე-4 კლასის მოსწავლეებისთვის ...',
+        link: '/News_Feed/news_165.html',
+    },
+    {
+        imageSrc: '/images/news/news_164/news_164_0.png',
+        title: 'საკვირაო სკოლის კრებული მე-3 კლასის',
+        date: '1 ოქტომბერი, 2024',
+        description: 'საკვირაო სკოლის კრებული მათემატიკაში მე-3 კლასის მოსწავლეებისთვის ...',
+        link: '/News_Feed/news_164.html',
+    },
+    {
         imageSrc: '/images/news/news_163/news_163_0.jpg',
         title: 'საიტების აწყობის წრე',
         date: '22 სექტემბერი, 2024',
