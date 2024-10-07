@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GO-ს კლუბი</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script>
+        $(function () {
+            $("#Nav").load("/NavBar/NavBar.html");
+        });
+        $(function () {
+            $("#Footer").load("/Footer/Footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">GO-ს კლუბი</div>
+                <p class="infotext">შაბათს, 5 ოქტომბერს გელოდებით გოს შემსწავლელი კურსის პირველ შეკრებაზე 15:00 საათზე
+                </p>
+                <p class="infotext">დასწრება თავისუფალია და შეუძლია ნებისმიერი სკოლის მოსწავლეს.</p>
+                <p class="infotext">ასაკი შეზღუდული არ არის</p>
+                <p class="infotext">დამატებითი ინფორმაციისთვის დარეკეთ შემდეგ ნომერზე: 577420400 - გოჩა დვალიშვილი</p>
+                <p class="infotext">რუსთაველის N127</p>
+                <p class="infotext">პირველად ქუთაისში !</p>
+                <p class="infotext">ჩვენს სკოლაში გაიხსნება „გო“-ს შემსწავლელი ჯგუფი.</p>
+                <p class="infotext">ამ თამაშში განსხეულებულია ცნობილი გამოთქმა “გენიალურობა სიმარტივეშია“. მიუხედავად
+                    უმარტივესი წესებისა, გო კაცობრიობის მიერ შექმნილი ერთ-ერთი ყველაზე სრულყოფილი სისტემაა. </p>
+                <p class="infotext">გო ღრმა სტრატეგიული თამაშია. ჭადრაკის მსგავსად ის ავითარებს ბევრ საჭირო თვისებას:
+                </p>
+                <p class="infotext"> განსხვავებულ ხედვას,</p>
+                <p class="infotext"> შორსმჭვრეტელობას, </p>
+                <p class="infotext">ხელს უწყობს აზროვნების სიღრმის გამომუშავებას, ყურადღების კონცენტრაციას, ახლო და
+                    შორეული გეგმის შემუშავების უნარის და ზოგადი ინტელექტის ზრდას. </p>
+                <p class="infotext">ამ სტრატეგიული თამაშის მიზანია დაფაზე ტერიტორიის დაკავება - მოიპოვო დაფაზე საკუთარი
+                    ტერიტორია და დაიცვა მეტოქისგან. </p>
+                <p class="infotext">თამაშს აქვს მეტად საინტერესო ფილოსოფიაც, მასში ადამიანის ხასიათის ამოცნობაც შეიძლება
+                    - ზედმეტი სიხარბე თუ ზომიერება, გადამეტებული გაბედულება თუ შიში, ყველაფერი თამაშის მსვლელობაზე
+                    აისახება.</p>
+                <p class="infotext">საინტერესოა ის ფაქტი, რომ გოში ყველა შესაძლო ვარიანტების რიცხვი გაცილებით მეტია,
+                    ვიდრე ჭადრაკში. თამაშის დასაწყისში გაკეთებული სვლა თამაშის ბოლოს შესაძლოა გადამწყვეტი აღმოჩნდეს.
+                </p>
+                <p class="infotext">კომპლექსურობა, ელეგანტურობა, იმპროვიზაცია არის იმ მრავალ ფაქტორთაგანი, რომლებიც გოს
+                    „ღმერთების თამაშად“ აქცევს. ასე რომ წინ გელოდებათ ინტელექტუალურ, აღმოსავლური იდუმალებით მოცულ
+                    სამყაროში მოგზაურობა. </p>
+                <p class="infotext">უკვე ოქტომბრის ბოლოსთვის დაგეგმილია პირველი ტურნირი.</p>
+                <p class="infotext">სწავლება უფასოა.</p>
+                <br />
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="/images/news/news_166/news_166_0.jpg" alt="Image 0" class="grid-image" />
+                    </div>
+                </div>
+                <div class="overlay" id="overlay">
+                    <div class="modal" id="modal">
+                        <img src="" alt="Zoomed Image" id="zoomed-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="Footer"></div>
+    <script>
+        // JavaScript
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+        const zoomedImage = document.getElementById("zoomed-image");
+
+        // Function to open the zoomed image
+        function openImage(src) {
+            zoomedImage.src = src;
+            overlay.style.display = "block";
+            document.documentElement.style.overflow = "hidden"; // Disable scrolling
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        // Function to close the zoomed image
+        function closeImage() {
+            overlay.style.display = "none";
+            document.documentElement.style.overflow = ""; // Enable scrolling
+            document.body.style.overflow = ""; // Enable scrolling
+        }
+
+        // Add a click event listener to the overlay to close the image when clicking outside
+        overlay.addEventListener("click", closeImage);
+
+        // Prevent the click event on the modal from closing the image
+        modal.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        // Example usage to open the image
+        const imageBoxes = document.querySelectorAll(".image-box");
+
+        imageBoxes.forEach(function (imageBox) {
+            const imageSrc = imageBox.querySelector("img").src;
+            imageBox.addEventListener("click", function () {
+                openImage(imageSrc);
+            });
+        });
+    </script>
+</body>
+
+</html>
