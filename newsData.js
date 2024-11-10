@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_181/news_181_0.jpeg',
+        title: 'სადირექციო წერა N1',
+        date: '10 ნოემბერი, 2024',
+        description: 'სადირექციო წერა N1-ზე გამოყენებული საკითხები მათემატიკაში ყველა კლასი...',
+        link: '/News_Feed/news_181.html',
+    },
+    {
         imageSrc: '/images/news/news_180/news_180_0.jpg',
         title: '„იყავი ინფორმირებული, იყავი დაცული“',
         date: '30 ოქტომბერი, 2024',
