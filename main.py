@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -27,6 +28,10 @@ options.add_experimental_option("detach", True)
 # Use ChromeDriverManager to automatically download and manage ChromeDriver
 driver = webdriver.Chrome(options=options)
 
+# Automatically manage ChromeDriver
+# service = ChromeService(ChromeDriverManager().install())
+# driver = webdriver.Chrome(service=service, options=options)
+
 print("please input values exactly as requested!")
 
 last_news_id = int(input("Input last news number"))
@@ -37,6 +42,16 @@ custom_name_for_images = input("Input custom name for image files (news_)(will r
 
 path_to_news_feed_files = input("Input path to news feed files like news_1.html (./News_Feed/)(for security)")
 custom_name_for_html_files = input("Input custom name for html files (news_)(will result in news_51.html)")
+
+# last_news_id = 51
+
+# path_to_news_image_folders = "./images/news/"
+# custom_name_for_images_directory = "news_"
+# custom_name_for_images = "news_"
+
+# path_to_news_feed_files = "./News_Feed/"
+# custom_name_for_html_files = "news_"
+
 
 post_links = []
 with open('links.txt', 'r') as file:
@@ -53,6 +68,16 @@ first_image_link = ""
 image_links = []
 paragraphs = []
 num_of_images = 0
+
+def check_and_reload():
+    try:
+        WebDriverWait(driver, 1).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, '.x6ikm8r.x10wlt62.xbe9js4.x1egiwwb'))
+        )
+        print("Element found! Reloading the page...")
+        driver.refresh()
+    except:
+        print("Element not found, continuing execution...")
 
 def checkHTMLForModalRefresh(soup):
     element = soup.find(class_="x6ikm8r x10wlt62 xbe9js4 x1egiwwb")
@@ -227,7 +252,25 @@ def photo_phase2():
     global image_links
     global num_of_images
     print("in photo phase...")
+    check_and_reload()
+    close_buttons = WebDriverWait(driver, 10).until(
+        EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[aria-label="Close"]'))
+    )
 
+    # Select the last button
+    if close_buttons:
+        close_button = close_buttons[-1]  # Last button
+        close_button_class = close_button.get_attribute("class")
+        unwanted_classes = "x1i10hfl xjqpnuy xa49m3k xqeqjp1 x2hbi6w x13fuv20 xu3j5b3 x1q0q8m5 x26u7qi x1ypdohk xdl72j9 x2lah0s xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r x2lwn1j xeuugli x16tdsg8 x1hl2dhg xggy1nq x1ja2u2z x1t137rt x1q0g3np x87ps6o x1lku1pv x1a2a7pz x6s0dn4 xzolkzo x12go9s9 x1rnf11y xprq8jg x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x78zum5 xl56j7k xexx8yu x4uap5 x18d9i69 xkhd6sd x1n2onr6 x1vqgdyp x100vrsf x18l40ae x14ctfv"
+        if unwanted_classes not in close_button_class:
+            # Scroll into view
+            ActionChains(driver).move_to_element(close_button).perform()
+            # Click using JavaScript to bypass overlays
+            driver.execute_script("arguments[0].click();", close_button)
+        else:
+            print("Button has unwanted class, skipping click.")
+    else:
+        print("No close button found.")
     soup = BeautifulSoup(driver.page_source, "html.parser")
     checkHTMLForModalRefresh(soup)
 
@@ -261,6 +304,8 @@ def photo_phase2():
     body_element = driver.find_element("tag name","body")
     body_element.send_keys(Keys.ARROW_RIGHT)
     time.sleep(2)
+    
+    
     photo_phase2()
     finish()
 
@@ -271,11 +316,22 @@ def photo_phase1():
     global image_links
     image_links = []
     print("in photo phase...")
-    close_button = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, '[aria-label="Close"]'))
+    print("sleeping for 1")
+    time.sleep(1)
+    # Wait for all elements matching '[aria-label="Close"]'
+    close_buttons = WebDriverWait(driver, 10).until(
+        EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[aria-label="Close"]'))
     )
-    close_button.click()
 
+    # Select the last button
+    if close_buttons:
+        close_button = close_buttons[-1]  # Last button
+        ActionChains(driver).move_to_element(close_button).perform()
+        driver.execute_script("arguments[0].click();", close_button)
+    else:
+        print("No close button found.")
+    # print("sleeping for 5")
+    # time.sleep(5)
     soup = BeautifulSoup(driver.page_source, "html.parser")
 
     images = soup.find_all("img")
@@ -337,13 +393,14 @@ def start_scrape(link):
     print(num_of_images)
     num_of_images = int(post_links[1])
     driver.get(link)
+    time.sleep(2)
     # Wait for the element with aria-label="Close" to be present
-    close_button = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, '[aria-label="Close"]'))
-    )
+    # close_button = WebDriverWait(driver, 10).until(
+    #     EC.presence_of_element_located((By.CSS_SELECTOR, '[aria-label="Close"]'))
+    # )
 
-    # Click on the close button
-    close_button.click()
+    # # Click on the close button
+    # close_button.click()
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
 
@@ -383,13 +440,12 @@ def start_scrape(link):
 
 
     #print(title.text.strip())
-
-    time.sleep(10)
+    time.sleep(1)
     if (num_of_images == 0):
         next_post()
 
     images = soup.find_all("img")
-    time.sleep(3)
+    # time.sleep(2)
     for image in images:
         width = image.get("width")
         height = image.get("height")
@@ -397,6 +453,8 @@ def start_scrape(link):
             current_element = image
             while current_element.name != 'a' and current_element.parent:
                 current_element = current_element.parent
+            print(current_element.get("href"))
+            time.sleep(2)
             driver.get(current_element.get("href"))
             photo_phase1()
             break
@@ -419,3 +477,4 @@ def start_scrape(link):
 
     #driver.quit()
 start_scrape(post_links[0])
+
