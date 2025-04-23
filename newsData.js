@@ -1,5 +1,40 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_220/news_220_0.jpg',
+        title: 'FEMO-ს გაზაფხულის ტური',
+        date: '22 აპრილი, 2025',
+        description: 'ვულოცავთ ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის II',
+        link: '/News_Feed/news_220.html',
+    },
+    {
+        imageSrc: '/images/news/news_219/news_219_0.jpg',
+        title: '"ნოე ჟორდანიას თასი 2025"',
+        date: '22 აპრილი, 2025',
+        description: ' მარიამ მიქაძემ " ნოე ჟორდანიას თასი 2025 "- ზე გამარჯვება მოიპოვა!',
+        link: '/News_Feed/news_219.html',
+    },
+    {
+        imageSrc: '/images/news/news_218/news_218_0.jpg',
+        title: 'FEMO-ს გაზაფხულის ტური',
+        date: '22 აპრილი, 2025',
+        description: 'ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის III-ზ კლასის',
+        link: '/News_Feed/news_218.html',
+    },
+    {
+        imageSrc: '/images/news/news_217/news_217_0.jpg',
+        title: '„ნონა გაფრინდაშვილის თასი“',
+        date: '22 აპრილი, 2025',
+        description: '12 აპრილს საქართველოს განათლების, მეცნიერებისა და ახალგაზრდობის სამინისტროს, სსიპ',
+        link: '/News_Feed/news_217.html',
+    },
+    {
+        imageSrc: '/images/news/news_216/news_216_0.jpg',
+        title: '„AI წიგნიერება & პრომპტ ინჟინერია“',
+        date: '22 აპრილი, 2025',
+        description: '„AI წიგნიერება & პრომპტ ინჟინერია“ - 2-დღიანი ტრენინგი სკოლის მოსწავლეებისთვის! ',
+        link: '/News_Feed/news_216.html',
+    },    
+    {
         imageSrc: '/images/news/news_215/news_215.png',
         title: 'LOPUS-ის STEM ოლიმპიადა',
         date: '26 მარტი, 2025',

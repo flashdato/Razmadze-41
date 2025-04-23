@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>„ნონა გაფრინდაშვილის თასი“</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <script>
+        $(function () {
+            $("#Nav").load("/NavBar/NavBar.html");
+        });
+        $(function () {
+            $("#Footer").load("/Footer/Footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">„ნონა გაფრინდაშვილის თასი“</div>
+                <p class="infotext">12 აპრილს საქართველოს განათლების, მეცნიერებისა და ახალგაზრდობის სამინისტროს, სსიპ
+                    მასწავლებელთა პროფესიული განვითარების ეროვნული ცენტრისა და საქართველოს ჭადრაკის ფედარაციის
+                    ორგანიზებით გაიმართა საქართველოს მეორე სასკოლო ოლიმპიადის რაიონული ტური ჭადრაკში „ნონა
+                    გაფრინდაშვილის თასი“, ზოგადსაგანმანათლებლო სკოლების I-II კლასის მოსწავლეთა შორის (გუნდური)</p>
+                <p class="infotext">ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლა წარდგენილი
+                    იყო შემდეგი შემადგენლობით:</p>
+                <p class="infotext">I დაფა --- ლუკა მაჩიტაძე</p>
+                <p class="infotext">II დაფა ---- სანდრო სახამბერიძე</p>
+                <p class="infotext">III დაფა ---- ერეკლე გველებიანი</p>
+                <p class="infotext">IV დაფა ---- გიორგი ცომაია</p>
+                <p class="infotext">გუნდის კაპიტანი --- თეა კურდღელია</p>
+                <p class="infotext">პირველი ეტაპი, რაიონული პირველობა, გაიმართა ოლიმპიური სისტემით. </p>
+                <p class="infotext">პატარა მოჭადრეკეებმა წარმატებით იასპარეზეს. ფინალური შეხვედრა 4:0 ითამაშეს, პირველი
+                    ადგილი დაიკავეს და რეგიონალურ პირველობაზე გასამგზავრებელი საგზური ღირსეული გამარჯვებით მოიპოვეს.</p>
+                <p class="infotext">რეგიონალურ პირველობაზე ქალაქის ღირსებას ჩვენი სკოლის პატარა მოჭადრაკეები დაიცავენ.
+                </p>
+                <p class="infotext">ვულოცავთ ჩვენს მოსწავლეებს ამ დიდ გამარჯვებას და წარმატებებს ვუსურვებთ.</p>
+                <br />
+                <div class="image-grid">
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_0.jpg" alt="Image 0" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_1.jpg" alt="Image 1" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_2.jpg" alt="Image 2" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_3.jpg" alt="Image 3" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_4.jpg" alt="Image 4" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_5.jpg" alt="Image 5" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_6.jpg" alt="Image 6" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_7.jpg" alt="Image 7" class="grid-image" />
+                    </div>
+                    <div class="image-box">
+                        <img src="/images/news/news_217/news_217_8.jpg" alt="Image 8" class="grid-image" />
+                    </div>
+                </div>
+                <div class="overlay" id="overlay">
+                    <div class="modal" id="modal">
+                        <img src="" alt="Zoomed Image" id="zoomed-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div id="Footer"></div>
+    <script>
+        // JavaScript
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+        const zoomedImage = document.getElementById("zoomed-image");
+
+        // Function to open the zoomed image
+        function openImage(src) {
+            zoomedImage.src = src;
+            overlay.style.display = "block";
+            document.documentElement.style.overflow = "hidden"; // Disable scrolling
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        // Function to close the zoomed image
+        function closeImage() {
+            overlay.style.display = "none";
+            document.documentElement.style.overflow = ""; // Enable scrolling
+            document.body.style.overflow = ""; // Enable scrolling
+        }
+
+        // Add a click event listener to the overlay to close the image when clicking outside
+        overlay.addEventListener("click", closeImage);
+
+        // Prevent the click event on the modal from closing the image
+        modal.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        // Example usage to open the image
+        const imageBoxes = document.querySelectorAll(".image-box");
+
+        imageBoxes.forEach(function (imageBox) {
+            const imageSrc = imageBox.querySelector("img").src;
+            imageBox.addEventListener("click", function () {
+                openImage(imageSrc);
+            });
+        });
+    </script>
+</body>
+
+</html>
