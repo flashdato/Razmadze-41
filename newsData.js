@@ -1,4 +1,11 @@
 const newsData = [
+     {
+        imageSrc: '/images/news/news_249/news_249_0.jpeg',
+        title: 'წლიური გამოცდა ქიმიაში',
+        date: '19 ივნისი, 2025',
+        description: '2025 წლის 19 ივნისს ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლაში ჩატარდა წლიური გამოცდა ქიმიაში.',
+        link: '/News_Feed/news_249.html',
+    },
     {
         imageSrc: '/images/news/news_248/news_248_0.jpeg',
         title: 'IV სადირექციო წერაზე გამოყენებული საკითხები მათემატიკაში',
