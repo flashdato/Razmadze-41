@@ -1,4 +1,18 @@
 const newsData = [
+    {
+        imageSrc: '/images/news/news_251/news_251_0.jpeg',
+        title: 'საშემოდგომო გამოცდა ფიზიკაში',
+        date: '4 ივლისი, 2025',
+        description: '2025 წლის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის საშემოდგომო გამოცდა ფიზიკაში.',
+        link: '/News_Feed/news_251.html',
+    },
+    {
+        imageSrc: '/images/news/news_250/news_250_0.jpeg',
+        title: 'საშემოდგომო გამოცდა მათემატიკაში',
+        date: '4 ივლისი, 2025',
+        description: '2025 წლის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის საშემოდგომო გამოცდა მათემატიკაში.',
+        link: '/News_Feed/news_250.html',
+    },
      {
         imageSrc: '/images/news/news_249/news_249_0.jpeg',
         title: 'წლიური გამოცდა ქიმიაში',
