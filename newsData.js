@@ -1,4 +1,11 @@
 const newsData = [
+     {
+        imageSrc: '/images/news/news_252/news_252_0.jpeg',
+        title: 'VII კლასში მისაღები გამოცდა',
+        date: '5 ივლისი, 2025',
+        description: '2025 წლის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის მისაღები გამოცდის საკითხები.',
+        link: '/News_Feed/news_252.html',
+    },
     {
         imageSrc: '/images/news/news_251/news_251_0.jpeg',
         title: 'საშემოდგომო გამოცდა ფიზიკაში',
