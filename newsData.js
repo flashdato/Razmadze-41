@@ -1,12 +1,19 @@
 const newsData = [
-      {
+    {
+        imageSrc: '/images/news/news_254/news_254_0.jpeg',
+        title: 'საზაფხულო სკოლის ოლიმპიადა',
+        date: '1 აგვისტო, 2025',
+        description: '2025 წლის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის საზაფხულო სკოლის ოლიმპიადა',
+        link: '/News_Feed/news_254.html',
+    },
+    {
         imageSrc: '/images/news/news_253/news_253_0.jpeg',
         title: 'X კლასში მისაღები გამოცდა ფიზიკაში',
         date: '5 ივლისი, 2025',
         description: '2025 წლის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის X კლასის მისაღები გამოცდა',
         link: '/News_Feed/news_253.html',
     },
-     {
+    {
         imageSrc: '/images/news/news_252/news_252_0.jpeg',
         title: 'VII კლასში მისაღები გამოცდა',
         date: '5 ივლისი, 2025',
@@ -27,7 +34,7 @@ const newsData = [
         description: '2025 წლის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის საშემოდგომო გამოცდა მათემატიკაში.',
         link: '/News_Feed/news_250.html',
     },
-     {
+    {
         imageSrc: '/images/news/news_249/news_249_0.jpeg',
         title: 'წლიური გამოცდა ქიმიაში',
         date: '19 ივნისი, 2025',
@@ -264,7 +271,7 @@ const newsData = [
         date: '22 აპრილი, 2025',
         description: '„AI წიგნიერება & პრომპტ ინჟინერია“ - 2-დღიანი ტრენინგი სკოლის მოსწავლეებისთვის! ',
         link: '/News_Feed/news_216.html',
-    },    
+    },
     {
         imageSrc: '/images/news/news_215/news_215.png',
         title: 'LOPUS-ის STEM ოლიმპიადა',
