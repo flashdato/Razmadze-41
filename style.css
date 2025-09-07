@@ -266,6 +266,7 @@ body {
     margin-top: 5%;
     letter-spacing: 1px;
     line-height: 25px;
+    text-decoration: none !important;
 }
 
 .timetable {
@@ -832,4 +833,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.infolink {
+    color: blue;
 }
