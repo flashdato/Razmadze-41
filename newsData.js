@@ -1,4 +1,18 @@
 const newsData = [
+       {
+        imageSrc: '/images/news/news_272/news_272_0.jpg',
+        title: 'სასკოლო სასწავლო გეგმა  2025-2026 წლები',
+        date: '8 ოქტომბერი, 2025',
+        description: 'ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის სასკოლო სასწავლო',
+        link: '/News_Feed/news_270.html',
+    },
+     {
+        imageSrc: '/images/news/news_271/news_271_0.jpeg',
+        title: 'შინაგანაწესი 2025-2026 წლები',
+        date: '8 ოქტომბერი, 2025',
+        description: 'ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლის შინაგანაწესი',
+        link: '/News_Feed/news_270.html',
+    },
     {
         imageSrc: '/images/news/news_270/news_270_0.jpg',
         title: 'სკოლის დელეგაცია პოზნანში',
