@@ -640,14 +640,14 @@ body {
 
 .PDF_Button2 {
     margin-top: 1%;
-    margin-left: 20%;
+    margin-left: 50%;
     display: inline-block;
     padding: 18px 24px;
     background-color: #3498db;
     /* Change the background color */
     color: #ffffff;
     /* Change the text color */
-    width: 60%;
+    min-width: 80%;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
