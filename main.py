@@ -41,7 +41,33 @@ post_links = []
 with open('links.txt', 'r') as file:
     post_links = [line.strip() for line in file if line.strip()] # Read and strip whitespace, ignore empty lines
 
+post_contexts = []
+
 def finish():
+    global post_contexts
+    print("\n=========================================")
+    print("COPY EVERYTHING BELOW THIS LINE AND PASTE IT TO GEMINI")
+    print("=========================================\n")
+    print("Please generate a JavaScript array of objects for the following news posts.")
+    print("For each post, please:")
+    print("1. Write a fitting 'title' in Georgian (MAX 3-4 words).")
+    print("2. Write a 'description' in Georgian based on the text. It MUST be between 100 and 150 characters long.")
+    print("3. Distribute the 'date' evenly between [ENTER START DATE HERE] and [ENTER END DATE HERE].")
+    print("4. Format the output exactly like this for every item:")
+    print("    {")
+    print("        imageSrc: '/images/news/news_ID/news_ID_0.jpg',")
+    print("        title: '...',")
+    print("        date: '...',")
+    print("        description: '...',")
+    print("        link: '/News_Feed/news_ID.html',")
+    print("    }")
+    print("\nHere is the raw data for the posts:\n")
+    
+    # Print in reverse so the newest ID is at the top of your JS array
+    for post in reversed(post_contexts):
+        print(f"--- ID: {post['id']} ---")
+        print(f"Context: {post['text']}\n")
+        
     driver.quit()
     sys.exit(0)
 
@@ -107,8 +133,8 @@ def sanitize_paragraph(paragraph):
     for span in empty_spans:
         if span.text.strip() == "":
             span.extract()
-            
-    return str(paragraph_soup)
+
+    return paragraph_soup.decode_contents()
 
 def download_image(image_url, save_path, filename):
     os.makedirs(save_path, exist_ok=True)
@@ -245,8 +271,22 @@ def next_post():
     global image_links
     global last_news_id
     global post_links
+    global post_contexts
 
     write_html_for_given_details(paragraphs, image_links)
+    
+    # Grab the first 350 characters of the post to feed to Gemini
+    full_text = " ".join([p.text.strip() for p in paragraphs if p.text.strip()])
+    context_text = full_text[:350].replace('\n', ' ')
+    if len(full_text) > 350:
+        context_text += "..."
+    if not context_text:
+        context_text = "No text found."
+        
+    post_contexts.append({
+        'id': last_news_id,
+        'text': context_text
+    })
     
     # Clear data for the next post
     paragraphs = []
@@ -330,6 +370,9 @@ def photo_phase2():
             image_links.append(src)
             found_new_image = True
             print(f"Found image: {src}")
+            print("Refreshing page after image ...")
+            driver.refresh()
+            time.sleep(3)
             if len(image_links) == num_of_images:
                 print("All images found. Moving to next post.")
                 next_post()
@@ -431,7 +474,7 @@ def photo_phase1():
         try:
             print("Clicking on image to open gallery...")
             driver.get(image_to_click_for_gallery.get("href")) # Directly navigate to the gallery link
-            time.sleep(3) # Give time for the gallery to load
+            time.sleep(2) # Give time for the gallery to load
             photo_phase2()
         except Exception as e:
             print(f"Error navigating to image gallery: {e}")
