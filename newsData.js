@@ -1,5 +1,12 @@
 const newsData = [
     {
+        imageSrc: '/images/news/news_358/news_358_0.png',
+        title: 'STEM ოლიმპიადა',
+        date: '4 აპრილი, 2026',
+        description: ' სსიპ ანდრია რაზმაძის სახელობის ქალაქ ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლაში LOPUS-ის',
+        link: '/News_Feed/news_358.html',
+    },
+    {
         imageSrc: '/images/news/news_357/news_357_0.jpg',
         title: 'პროექტი ინგლისურ ენაზე',
         date: '7 მარტი, 2026',
