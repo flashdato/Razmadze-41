@@ -1,0 +1,121 @@
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>FEMO — II კლასი</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="crossorigin="anonymous" />
+        <script>
+            $(function () {
+                $("#Nav").load("/NavBar/NavBar.html");
+            });
+            $(function () {
+                $("#Footer").load("/Footer/Footer.html");
+            });
+        </script>
+    </head>
+    <body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">FEMO — II კლასი</div>
+    <p class="infotext"> FEMO – Fizmat Elementary Math Olympiad</p>
+<p class="infotext"> 15 მარტს გაიმართა მე-8 საერთაშორისო ოლიმპიადა მათემატიკაში, სადაც წარმატებით იასპარეზეს ჩვენი სკოლის მოსწავლეებმა </p>
+<p class="infotext">ოლიმპიადაზე  I ადგილი დაიკავა II ა კლასის მოსწავლემ — თომა ყუბანეიშვილმა.</p>
+<p class="infotext"> II ადგილი მოიპოვა 5-მა მოსწავლემ, ხოლო  III ადგილი — 6-მა მოსწავლემ </p>
+<p class="infotext"> II ა კლასი</p>
+<p class="infotext"> თომა ყუბანეიშვილი</p>
+<p class="infotext"> დათა დათეშიძე</p>
+<p class="infotext"> დემეტრე მშვენიერაძე</p>
+<p class="infotext">დამრიგებელი — ნინო გუგეშაშვილი</p>
+<p class="infotext"> II გ კლასი</p>
+<p class="infotext"> ლევანი კენჭაძე</p>
+<p class="infotext"> იოანე საღინაძე</p>
+<p class="infotext">დამრიგებელი — ნინო გამყრელიძე</p>
+<p class="infotext"> II დ კლასი</p>
+<p class="infotext"> მარიამ მიქაძე</p>
+<p class="infotext">დამრიგებელი — ელისო კუბლაშვილი</p>
+<p class="infotext"> II ე კლასი</p>
+<p class="infotext"> დემეტრე ბარდაველიძე</p>
+<p class="infotext"> იოანა კოპალიანი</p>
+<p class="infotext">დამრიგებელი — მარინე აფხაიძე</p>
+<p class="infotext"> II ზ კლასი</p>
+<p class="infotext"> შოთიკო მანაგაძე</p>
+<p class="infotext"> თომა მაჩიტიძე</p>
+<p class="infotext">დამრიგებელი - თეონა ჩარკვიანი</p>
+<p class="infotext"> II ვ კლასი</p>
+<p class="infotext"> ნიკოლოზ სვანიძე</p>
+<p class="infotext"> ალექსანდრე იოსელიანი</p>
+<p class="infotext">დამრიგებელი — თამარი ფოჩხუა</p>
+<p class="infotext">საპატიო სიგელი</p>
+<p class="infotext">მარიამ გურეშიძე - II ზ კლასი</p>
+<p class="infotext">იოანე ჩიხლაძე - II ე კლასი</p>
+<p class="infotext"> ვულოცავთ ჩვენს მოსწავლეებს ამ დიდ წარმატებას და ვუსურვებთ კიდევ ბევრ გამარჯვებას! </p>
+<p class="infotext"> განსაკუთრებული მადლობა მასწავლებლებს, რომლებიც მუდმივად მხარს უჭერენ და ხელს უწყობენ მათ განვითარებას </p>
+<br />
+<div class="image-grid"><div class="image-box">
+<img src="/images/news/news_367/news_367_0.jpg" alt = "Image 0" class="grid-image" />
+</div>
+</div> 
+        <div class="overlay" id="overlay">
+                            <div class="modal" id="modal">
+                                <img src="" alt="Zoomed Image" id="zoomed-image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div id="Footer"></div>
+            <script>
+                // JavaScript
+                const overlay = document.getElementById("overlay");
+                const modal = document.getElementById("modal");
+                const zoomedImage = document.getElementById("zoomed-image");
+
+                // Function to open the zoomed image
+                function openImage(src) {
+                    zoomedImage.src = src;
+                    overlay.style.display = "block";
+                    document.documentElement.style.overflow = "hidden"; // Disable scrolling
+                    document.body.style.overflow = "hidden"; // Disable scrolling
+                }
+
+                // Function to close the zoomed image
+                function closeImage() {
+                    overlay.style.display = "none";
+                    document.documentElement.style.overflow = ""; // Enable scrolling
+                    document.body.style.overflow = ""; // Enable scrolling
+                }
+
+                // Add a click event listener to the overlay to close the image when clicking outside
+                overlay.addEventListener("click", closeImage);
+
+                // Prevent the click event on the modal from closing the image
+                modal.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // Example usage to open the image
+                const imageBoxes = document.querySelectorAll(".image-box");
+
+                imageBoxes.forEach(function (imageBox) {
+                    const imageSrc = imageBox.querySelector("img").src;
+                    imageBox.addEventListener("click", function () {
+                        openImage(imageSrc);
+                    });
+                });
+            </script>
+    </body>
+
+    </html>
+    

@@ -1,0 +1,99 @@
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>კალიგრაფიის კონკურსი</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="crossorigin="anonymous" />
+        <script>
+            $(function () {
+                $("#Nav").load("/NavBar/NavBar.html");
+            });
+            $(function () {
+                $("#Footer").load("/Footer/Footer.html");
+            });
+        </script>
+    </head>
+    <body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">კალიგრაფიის კონკურსი</div>
+    <p class="infotext"> 14 აპრილს, დედაენის დღეს, ქუთაისის სახელმწიფო ისტორიული მუზეუმში ტრადიციულად გაიმართა კალიგრაფიის კონკურსის გამარჯვებულთა დაჯილდოების ცერემონია.</p>
+<p class="infotext"> ანდრია რაზმაძის სახელობის ქუთაისის N41 ფიზიკა-მათემატიკის საჯარო სკოლისთვის განსაკუთრებული საამაყოა, რომ ჩვენი სკოლის დირექტორი გენადი მარგველაშვილი კონკურსში პედაგოგთა კატეგორიაში ჟიურის რჩეული გახდა. </p>
+<p class="infotext"> გამარჯვებულებს სიგელები გადასცეს და გამარჯვება მიულოცეს ქუთაისის მერის მოადგილემ შალვა მშვილდაძემ, ქუთაისის მუნიციპალიტეტის საკრებულოს წევრმა ბიქტორ გვეტაძემ, ქუთაისის საგანმანათლებლო რესურსცენტრის ხელმძღვანელმა მაია ცქიტიშვილმა და გაერთიანების მმართველმა ვაჟა ჯუღელმა.</p>
+<p class="infotext"> კალიგრაფიის კონკურსი უკვე მრავალი წელია ხელს უწყობს ქართული დამწერლობის, ენისა და კულტურის პოპულარიზაციას, რაც თითოეული ჩვენგანისთვის განსაკუთრებით მნიშვნელოვანი და დასაფასებელია.</p>
+<p class="infotext"> ვულოცავთ ჩვენს დირექტორს ამ დიდ წარმატებას და ვუსურვებთ კიდევ მრავალ გამარჯვებას! </p>
+<br />
+<div class="image-grid"><div class="image-box">
+<img src="/images/news/news_390/news_390_0.jpg" alt = "Image 0" class="grid-image" />
+</div>
+<div class="image-box">
+<img src="/images/news/news_390/news_390_1.jpg" alt = "Image 1" class="grid-image" />
+</div>
+<div class="image-box">
+<img src="/images/news/news_390/news_390_2.jpg" alt = "Image 2" class="grid-image" />
+</div>
+</div> 
+        <div class="overlay" id="overlay">
+                            <div class="modal" id="modal">
+                                <img src="" alt="Zoomed Image" id="zoomed-image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div id="Footer"></div>
+            <script>
+                // JavaScript
+                const overlay = document.getElementById("overlay");
+                const modal = document.getElementById("modal");
+                const zoomedImage = document.getElementById("zoomed-image");
+
+                // Function to open the zoomed image
+                function openImage(src) {
+                    zoomedImage.src = src;
+                    overlay.style.display = "block";
+                    document.documentElement.style.overflow = "hidden"; // Disable scrolling
+                    document.body.style.overflow = "hidden"; // Disable scrolling
+                }
+
+                // Function to close the zoomed image
+                function closeImage() {
+                    overlay.style.display = "none";
+                    document.documentElement.style.overflow = ""; // Enable scrolling
+                    document.body.style.overflow = ""; // Enable scrolling
+                }
+
+                // Add a click event listener to the overlay to close the image when clicking outside
+                overlay.addEventListener("click", closeImage);
+
+                // Prevent the click event on the modal from closing the image
+                modal.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // Example usage to open the image
+                const imageBoxes = document.querySelectorAll(".image-box");
+
+                imageBoxes.forEach(function (imageBox) {
+                    const imageSrc = imageBox.querySelector("img").src;
+                    imageBox.addEventListener("click", function () {
+                        openImage(imageSrc);
+                    });
+                });
+            </script>
+    </body>
+
+    </html>
+    

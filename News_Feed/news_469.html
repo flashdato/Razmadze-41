@@ -1,0 +1,101 @@
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>GENIUS Olympiad — დავით</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" type="image/x-icon" href="/images/logo3.png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="crossorigin="anonymous" />
+        <script>
+            $(function () {
+                $("#Nav").load("/NavBar/NavBar.html");
+            });
+            $(function () {
+                $("#Footer").load("/Footer/Footer.html");
+            });
+        </script>
+    </head>
+    <body>
+    <div id="Nav"></div>
+
+    <div class="box">
+        <div class="about">
+            <div class="content1">
+                <div class="title">GENIUS Olympiad — დავით</div>
+    <p class="infotext"> ანდრია რაზმაძის სახელობის ქალაქ ქუთაისის №41 ფიზიკა-მათემატიკის საჯარო სკოლის XII-ბ კლასის მოსწავლე დავით ჟორჟოლიანმა GENIUS Olympiad-ის საერთაშორისო ფინალურ ეტაპზე მიიღო მონაწილეობა და ფინალისტი პრეზენტატორის სერტიფიკატით დაჯილდოვდა.</p>
+<p class="infotext"> ოლიმპიადა გარემოს დაცვის მიმართულებით განხორციელებული პროექტების ერთ-ერთი ყველაზე მასშტაბური საერთაშორისო კონკურსია, რომლის ფინალური ეტაპი აშშ-ში, ქალაქ როჩესტერში გაიმართა.</p>
+<p class="infotext"> ვულოცავთ დავითს ამ მნიშვნელოვან წარმატებას და ვუსურვებთ მომავალშიც არაერთ გამარჯვებას! </p>
+<p class="infotext">დამრიგებელი - <span class="html-span xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x1hl2dhg x16tdsg8 x1vvkbs"><a class="x1i10hfl xjbqb8w x1ejq31n x18oe1m7 x1sy0etr xstzfhl x972fbf x10w94by x1qhh985 x14e42zd x9f619 x1ypdohk xt0psk2 x3ct3a4 xdj266r x14z9mp xat24cr x1lziwak xexx8yu xyri2b x18d9i69 x1c1uobl x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz xkrqix3 x1sur9pj x1fey0fg x1s688f" href="https://www.facebook.com/pikria.jimsheleishvili.2025?__cft__[0]=AZbj_3smZyJwpn5luvJ1TOw6MnBXMNd7VAEmsQ9fgZDHtmzrr8Azz92Mv8g_VUCAXxveat00vBsyFJhG-tZcry4zuZbGWB0OJnQkYJrAu-ijgHnmpArXR-KZ1sm6fZyssyER9zmLXXb9gpM5ZVjBWpXPDcuN3C0koanL7zjme8xGig&amp;__tn__=-]K-R" role="link" tabindex="0">ფიქრია ჯიმშელეიშვილი</a></span></p>
+<br />
+<div class="image-grid"><div class="image-box">
+<img src="/images/news/news_469/news_469_0.jpg" alt = "Image 0" class="grid-image" />
+</div>
+<div class="image-box">
+<img src="/images/news/news_469/news_469_1.jpg" alt = "Image 1" class="grid-image" />
+</div>
+<div class="image-box">
+<img src="/images/news/news_469/news_469_2.jpg" alt = "Image 2" class="grid-image" />
+</div>
+<div class="image-box">
+<img src="/images/news/news_469/news_469_3.jpg" alt = "Image 3" class="grid-image" />
+</div>
+</div> 
+        <div class="overlay" id="overlay">
+                            <div class="modal" id="modal">
+                                <img src="" alt="Zoomed Image" id="zoomed-image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div id="Footer"></div>
+            <script>
+                // JavaScript
+                const overlay = document.getElementById("overlay");
+                const modal = document.getElementById("modal");
+                const zoomedImage = document.getElementById("zoomed-image");
+
+                // Function to open the zoomed image
+                function openImage(src) {
+                    zoomedImage.src = src;
+                    overlay.style.display = "block";
+                    document.documentElement.style.overflow = "hidden"; // Disable scrolling
+                    document.body.style.overflow = "hidden"; // Disable scrolling
+                }
+
+                // Function to close the zoomed image
+                function closeImage() {
+                    overlay.style.display = "none";
+                    document.documentElement.style.overflow = ""; // Enable scrolling
+                    document.body.style.overflow = ""; // Enable scrolling
+                }
+
+                // Add a click event listener to the overlay to close the image when clicking outside
+                overlay.addEventListener("click", closeImage);
+
+                // Prevent the click event on the modal from closing the image
+                modal.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+
+                // Example usage to open the image
+                const imageBoxes = document.querySelectorAll(".image-box");
+
+                imageBoxes.forEach(function (imageBox) {
+                    const imageSrc = imageBox.querySelector("img").src;
+                    imageBox.addEventListener("click", function () {
+                        openImage(imageSrc);
+                    });
+                });
+            </script>
+    </body>
+
+    </html>
+    
