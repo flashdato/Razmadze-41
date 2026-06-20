@@ -22,7 +22,7 @@ options = Options()
 options.headless = True
 options.add_experimental_option("detach", True)
 
-service = ChromeService(ChromeDriverManager().install())
+service = ChromeService("/usr/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
 print("please input values exactly as requested!")
